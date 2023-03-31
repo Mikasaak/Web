@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type='text/javascript' src="vue.js"></script>
+    </head>
+    <!--   CSS   -->
+    <style>
+* {	
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+video {
+    /* display: block; */
+    width: 100%;
+    height: 300px;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after{
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px auto;
+    background-color: powderblue;
+    border-radius: 50px;
+}
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box ul li {
+    flex: 1;
+    /* float: right; */
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0 5px;
+    transition:all 800ms;
+}
+
+ul li img {
+    width: 90%;
+    height: 700px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.box header {
+    width: 100%;
+    height: 120px;
+    background: url(../images/5e4897aee1a52983497755cc053f2c60_2772002455204874839.webp) no-repeat center;
+}
+.box ul li:hover {
+    /* width: 40%; */
+    flex-basis: 40%;
+
+}
+.box h2 {
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+</style>
+    <body>
+        <audio src="../source/1663771638_6wE13HJj6EHJQ24kZ_Source.mp4"
+            autoplay="autoplay" muted="muted" controls="controls"></audio>
+        <header>
+            <nav>
+
+            </nav>
+            <article>
+                <section>
+
+                </section>
+            </article>
+        </header>
+        <footer></footer>
+        <form action="">
+            <input type="text" required="required" placeholder="wnDSB"
+                autofocus="autofocus" autocomplete="off">
+            <input type="file" multiple="multiple">
+            <input type="submit" value="提交">
+
+        </form>
+        <br>
+        <div class="box clearfix">
+            <!-- <header>
+            </header> -->
+            <ul>
+                <li>
+                    <img src="../images/bachong.webp" alt="">
+                    <h2>八重神子</h2>
+                </li>
+                <li>
+                    <img src="../images/leijun.webp" alt="">
+                    <h2>雷电将军</h2>
+                </li>
+                <li>
+                    <img src="../images/bachong.webp" alt="">
+                    <h2>八重神子</h2>
+                </li>
+                <li>
+                    <img src="../images/leijun.webp" alt="">
+                    <h2>雷电将军</h2>
+                </li>
+                <li>
+                    <img src="../images/bachong.webp" alt="">
+                    <h2>八重神子</h2>
+                </li>
+                <li>
+                    <img src="../images/leijun.webp" alt="">
+                    <h2>雷电将军</h2>
+                </li>
+                <li>
+                    <img src="../images/lingren.webp" alt="">
+                    <h2>神里凌人</h2>
+                </li>
+                <li>
+                    <img src="../images/shenhe.webp" alt="">
+                    <h2>申鹤</h2>
+                </li>
+                <li>
+                    <img src="../images/xinhai.webp" alt="">
+                    <h2>珊瑚宫心海</h2>
+                </li>
+                <li>
+                    <img src="../images/yunjin.webp" alt="">
+                    <h2>云堇</h2>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

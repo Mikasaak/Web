@@ -1,0 +1,126 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+.header {
+    height: 84px;
+    border-bottom: 2px solid #c81523;
+}
+.header .logo {
+    padding-top: 18px;
+}
+.register-area {
+    height: 522px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+}
+.register-area h3 {
+    height: 42px;
+    border-bottom: 1px solid #ccc;
+    background-color: #ececec;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 400;
+}
+.register-area h3 .login { 
+    float: right;
+    font-size: 14px;
+}
+.register-area h3 .login a {
+    color: #c81523;
+}
+.reg-form {
+    width: 600px;
+    /* background-color: peru; */
+    margin: 50px auto 0;
+}
+.reg-form ul li {
+    margin-bottom: 20px;
+}
+.reg-form ul li label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+}
+.reg-form ul li input[type = "text"] ,
+.reg-form ul li input[type = "password"] {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+.error {
+    color: #c81523;
+}
+.error-icon ,
+.success-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-top: -2px;
+    
+}
+.error-icon {
+    background: url(../images/error.png) no-repeat center;
+}
+.success {
+    color: green;
+}
+.success-icon {
+    background: url(../images/success.png) no-repeat center;
+}
+
+.safe {
+    padding-left: 170px;
+    color: #bebebe;
+}
+.reg-form ul .safe em{
+    padding: 0 12px;
+    color: #ffffff;
+}
+.reg-form ul .safe em:nth-child(1) {
+    background-color: #de1111;
+}
+.reg-form ul .safe em:nth-child(2) {
+    background-color: #40b83f;
+}
+.reg-form ul .safe em:nth-child(3) {
+    background-color: #f79100;
+}
+.agree {
+    padding-left: 95px;
+}
+.agree input {
+    vertical-align: middle;
+}
+.agree a {
+    color: #1ba1e6;
+}
+input[type = "submit"] {
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    margin: 30px 0 0 70px;
+    color: #ffffff;
+    font-size: 14px;
+}
+.footer {
+    height: 415px;
+    /* background-color: #f5f5f5; */
+    /* padding-top: 30px; */
+}
+
+.footer .mod-copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+.footer .mod-copyright .links {
+    margin-bottom: 15px;
+}
+.footer .mod-copyright .links a {
+    margin: 0 5px;
+}
+.footer .mod-copyright .copyright {
+    line-height: 20px;
+}

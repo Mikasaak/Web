@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        .price {
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            margin: 0 auto;
+            line-height: 24px;
+            text-align: center;
+        }
+        .sanjiao {
+            width: 0;
+            height: 0;
+            
+
+            border-width: 10px 10px 10px 10px;
+            border-style: solid;
+            border-color: pink red  green  blue;
+        }
+        .later {
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 100%;
+            background-color: red;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+
+        }
+        .before {
+            font-size: 12px;
+            text-decoration: line-through;
+        }
+        i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-width: 24px 10px 0 0 ;
+            border-style: solid;
+            border-color: transparent #fff transparent transparent;
+        }
+    </style>
+    </head>
+    <body>
+        <i></i>
+        <div class="sanjiao"></div>
+        <div class="price">
+            <span class="later">￥169
+                <i></i>
+            </span>
+            <span class="before">￥200</span>
+        </div>
+    </body>
+</html>

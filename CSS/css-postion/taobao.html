@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        .tb-promo {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            margin: 100px auto;
+        }
+        .tb-promo img {
+            width: 100%;
+        }
+        .prev {
+            left: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+
+        } 
+        .next {
+
+            right: 0;
+            border-radius: 15px 0  0 15px;
+
+        } 
+        .prev ,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, .5);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+        .promo-nav 
+        {
+                position: absolute;
+                bottom: 15px;
+                left: 50%;
+                margin-left: -35px;
+                width: 70px;
+                height: 13px;
+                /* line-height: 13px; */
+                background-color: rgba(255,255,255,0.3);
+                border-radius: 7px;
+        }
+        .promo-nav li {
+            float: left;
+            margin: 3px;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+        }
+        
+    </style>
+    </head>
+    <body>
+        <div class="tb-promo">
+            <img
+                src="../html_css_material-master/html_css_material-master/第八天/images/tb.jpg"
+                alt="">
+            <a href="#" class="prev">&lt;</a>
+            <div class="next">&gt;</div>
+            <ul class="promo-nav">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>

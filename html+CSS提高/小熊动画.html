@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        @keyframes bearruning {
+            0% {
+            }
+            100% {
+                background-position-x:-1600px;
+            }
+            
+        }
+        @keyframes move {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+        }
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 100px;
+            background: url(media/bear.png) no-repeat;
+            animation: bearruning 1s steps(8) infinite , move 3s linear 1 forwards;
+
+        }
+        body {
+            background-color: #ccc;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+
+        </div>
+    </body>
+</html>

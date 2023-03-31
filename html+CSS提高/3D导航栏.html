@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .nav {
+                perspective: 800px;
+                margin: 100px auto;
+            }
+            li .box{ 
+                width: 200px;
+                height: 100px;
+                transform-style: preserve-3d;
+                transition: all .6s;
+            }
+            li {
+                list-style: none;
+            }
+            li .box{
+                float: left;
+                margin-left: 10px;
+                
+            }
+            li .box:hover {
+                transform-origin: bottom;
+                transform:translateY(-100px) rotateX(90deg);
+            }
+            .nav li .heads,
+            .nav li .bottom{
+                width: 100%;
+                height: 100%;
+            }
+            .heads {
+                background-color: aqua;
+            }
+            .bottom {
+                transform-origin: top;
+                transform: rotateX(-90deg);
+                background-color: pink;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li>
+                    <div class="box">
+                        <div class="heads">123</div>
+                        <div class="bottom">abc</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="heads">123</div>
+                        <div class="bottom">abc</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="heads">123</div>
+                        <div class="bottom">abc</div>
+                    </div>
+                </li>
+                <li><div class="box">
+                        <div class="heads">123</div>
+                        <div class="bottom">abc</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h4>青春不常在，抓紧谈恋爱</h4>
+        <form action="dome.php" name="logon" method="get">
+            <table width="800" border="0" cellspacing="0">
+                <!-- 第一行 性别-->
+                <tr>
+                    <td>性别</td>
+                    <td>
+                        <input type="radio" name="性别" value="男" id="nan">
+                        <label for="nan"><img
+                                src="../source/html_css_material-master/html_css_material-master/第二天/images/man.jpg">男</label>
+                        <input type="radio" name="性别" value="女" id="nv">
+                        <label for="nv"><img
+                                src="../source/html_css_material-master/html_css_material-master/第二天/images/women.jpg">女</label>
+                    </td>
+                </tr>
+                <!-- 第二行 生日 -->
+                <tr>
+                    <td>生日</td>
+                    <td>
+                        <select name="年">
+                            <option value="NULL">--请选择出生年份--</option>
+                            <option value="2000年">2000年</option>
+                            <option value="2001年">2001年</option>
+                            <option value="2002年">2002年</option>
+                            <option value="2003年">2003年</option>
+                            <option value="2004年">2004年</option>
+                            <option value="2005年">2005年</option>
+                            <option value="2006年">2006年</option>
+                        </select>
+                        <select name="月">
+                            <option value="NULL">--请选择出生月份--</option>
+                            <option value="1月">1月</option>
+                            <option value="2月">2月</option>
+                            <option value="3月">3月</option>
+                            <option value="4月">4月</option>
+                            <option value="5月">5月</option>
+                            <option value="6月">6月</option>
+                            <option value="7月">7月</option>
+                            <option value="8月">8月</option>
+                            <option value="9月">9月</option>
+                            <option value="10月">10月</option>
+                            <option value="11月">11月</option>
+                            <option value="12月">12月</option>
+                        </select>
+                        <select name="日">
+                            <option value="NULL">--请选择出生日--</option>
+                            <option value="1日">1日</option>
+                            <option value="2日">2日</option>
+                            <option value="3日">3日</option>
+                            <option value="4日">4日</option>
+                            <option value="5日">5日</option>
+                            <option value="6日">6日</option>
+                            <option value="7日">7日</option>
+                            <option value="8日">8日</option>
+                            <option value="9日">9日</option>
+                            <option value="10日">10日</option>
+                            <option value="11日">11日</option>
+                            <option value="12日">12日</option>
+                            <option value="13日">13日</option>
+                            <option value="14日">14日</option>
+                            <option value="15日">15日</option>
+                            <option value="16日">16日</option>
+                            <option value="17日">17日</option>
+                            <option value="18日">18日</option>
+                            <option value="19日">19日</option>
+                            <option value="20日">20日</option>
+                            <option value="21日">21日</option>
+                            <option value="22日">22日</option>
+                            <option value="23日">23日</option>
+                            <option value="24日">24日</option>
+                            <option value="25日">25日</option>
+                            <option value="26日">26日</option>
+                            <option value="27日">27日</option>
+                            <option value="28日">28日</option>
+                            <option value="29日">29日</option>
+                            <option value="30日">30日</option>
+                            <option value="31日">31日</option>
+                        </select>
+                    </td>
+                </tr>
+                <!-- 第三行 -->
+                <tr>
+                    <td>
+                        <label for="address">所在地区</label>
+                    </td>
+                    <td>
+                        <input type="text" name="地址" value="请输入您的所在地区地址"
+                            id="address">
+                    </td>
+                </tr>
+                <!-- 第四行 -->
+                <tr>
+                    <td>婚姻状况</td>
+                    <td><input type="radio" name="婚姻状况" value="已婚" id="married">
+                        <label for="married">已婚</label>
+                        <input type="radio" name="婚姻状况" value="未婚"
+                            id="Nmarried">
+                        <label for="Nmarried">未婚</label>
+                        <input type="radio" name="婚姻状况" value="离异" id="divorce">
+                        <label for="divorce">离异</label>
+                    </td>
+                </tr>
+                <!-- 第五行 -->
+                <tr>
+                    <td>
+                        <label for="education">学历</label>
+                    </td>
+                    <td>
+                        <input type="text" name="学历" value="请输入您的学历"
+                            id="education">
+                    </td>
+                </tr>
+                <!-- 第六行 -->
+                <tr>
+                    <td>喜欢的类型</td>
+                    <td>
+                        <input type="checkbox" name="喜欢的类型" value="可爱的" id="1">
+                        <label for="1">可爱的</label>
+                        <input type="checkbox" name="喜欢的类型" value="性感的" id="2">
+                        <label for="2">性感的</label>
+                        <input type="checkbox" name="喜欢的类型" value="果敢的" id="3">
+                        <label for="3">果敢的</label>
+                        <input type="checkbox" name="喜欢的类型" value="直率的" id="4">
+                        <label for="4">直率的</label>
+                        <input type="checkbox" name="喜欢的类型" value="苗条的" id="5">
+                        <label for="5">苗条的</label>
+                        <input type="checkbox" name="喜欢的类型" value="年轻的" id="6">
+                        <label for="6">年轻的</label>
+                    </td>
+                </tr>
+                <!-- 第七行 -->
+                <tr>
+                    <td><label for="self-introduction"></label>个人介绍</td>
+                    <td>
+                        <textarea name="个人介绍"
+                            id="self-introduction" cols="100" rows="10"></textarea>
+                    </td>
+                </tr>
+                <!-- 第八行 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="免费注册">
+                    </td>
+                </tr>
+                <!-- 第九行 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" value="是"
+                            name="是否同意条款" checked="checked">我同意条款和会员加入标准
+                    </td>
+                </tr>
+                <!-- 第十行 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <a href="#">我是会员，立即登录</a>
+                    </td>
+                </tr>
+                <!-- 第十一行 -->
+                <tr>
+                    <td></td>
+                    <td>
+                        <h5>我承诺</h5>
+                        <ul>
+                            <li>年满18周岁且单身</li>
+                            <li>抱着严肃的态度寻找另一半</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

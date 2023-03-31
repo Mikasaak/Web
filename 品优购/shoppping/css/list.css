@@ -1,0 +1,64 @@
+.logo {
+    position: relative;
+}
+.logo .sk {
+    position: absolute;
+    left: 190px;
+    top: 15px;
+    border-left: 1px solid #c81523;
+    padding: 3px 0 0 14px;
+}
+.nav {
+    overflow: hidden;
+}
+.sk-list {
+    float: left;
+}
+.sk-list ul li {
+    float: left;
+
+}
+.sk-list ul li a {
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 47px;
+    padding: 0 30px;
+    color: #000;
+
+}
+.sk-con {
+    float: left;
+}
+.sk-con ul li {
+    float: left;
+}
+.sk-con ul li a {
+    display: block;
+    font-size: 14px;
+    line-height: 49px;
+    padding: 0 20px;
+
+}
+.sk-con ul li:last-child a::after{
+    display: inline-block;
+    font-family: "icomoon";
+    content:"\e91e" ;
+}
+.sk-bd >ul>li {
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin-right: 13px;
+    border: 1px solid transparent;
+}
+.sk-bd >ul>li:nth-child(4n) {
+    margin-right: 0 ;
+}
+.sk-bd >ul>li>img {
+    width: 100%;
+    height: 100%;
+}
+.sk-bd >ul>li:hover {
+    border: 1px solid #c81523;
+}

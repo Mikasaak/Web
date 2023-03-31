@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            position: relative;
+        }
+        .box {
+            position: relative;
+            width: 250px;
+            height: 35px;
+            border: 2px solid #000;
+        }
+        .box::after {
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-bottom: 1px solid #000;
+            border-right: 1px solid #000;
+            transform: rotate(45deg);
+            transition: all 0.5s;
+
+        }
+        .box:hover::after {
+            transform: rotate(225deg);
+        }
+        .sm {
+           width: 200px;
+           height: 200px;
+           background-color: skyblue;
+           margin: 100px auto;
+           transform-origin: left bottom;
+           transition: all 0.5s;
+        }
+        .sm:hover {
+            
+            transform: rotate(180deg);
+        }
+        .father {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border-radius: 50% 50%;
+            border: 1px solid pink ;
+            overflow: hidden;
+        }
+        .father::after {
+            content: "传媒";
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(25deg, #172fd8, #6675b7, #6fb790, #49fb5a);
+            background-repeat: no-repeat;
+            font-size: 50px;
+            font-weight: 700;
+            color: aliceblue;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 50% 50%;
+            transform-origin: left bottom;
+            transform: rotate(180deg);
+            transition: all 0.5s;
+        }
+        .father:hover::after {
+            transform: rotate(0deg);
+        }
+        #test1 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin: 100px auto;
+            border-radius: 50% 50%;
+            transition: all .5s;
+        }
+        #test1:hover {
+            transform: scale(2,1.5);
+        }
+    </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="box">
+        </div>
+        <div class="sm"></div>
+        <div class="father">
+        </div>
+        <div id="test1"></div>
+    </body>
+</html>

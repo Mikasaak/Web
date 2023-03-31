@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                
+            }
+            .box {
+                perspective: 800px;
+                transform-style: preserve-3d;
+                position: relative;
+                width: 500px;   
+                height: 500px;
+                margin: 100px auto;
+                transform: rotateY(45deg);
+            }
+            .pink {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 500px;
+                height: 500px;
+                background-color: pink;
+            }
+            .sky {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 500px;
+                height: 500px;
+                background-color: skyblue;
+                transform: rotateX(45deg);
+                
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="pink"></div>
+            <div class="sky"></div>
+        </div>
+    </body>
+</html>

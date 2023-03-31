@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+            .main {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                background-color: aqua;
+                margin: 0 auto;
+            }
+            .main img {
+                width: 100%;
+                height: 100%;
+            }
+            .main::before {
+                display: none;
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, .3) url(../../html_css_material-master/html_css_material-master/第八天/images/arr.png) no-repeat center;
+            }
+            .main:hover::before {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <div class="mask"></div>
+            <img src="../source/07.jpg" alt="">
+        </div>
+    </body>
+</html>

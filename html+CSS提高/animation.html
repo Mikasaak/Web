@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .box {
+                position: relative;
+                width: 1000px;
+                height: 800px;
+                background: url(media/R-C.png) no-repeat center center;
+                background-size: 100%;
+                background-position: -15px;
+            }
+            .box .point1 {
+                position: absolute;
+                top: 199px;
+                right: 146px;
+            }
+            .box .point2 {
+                position: absolute;
+                top: 500px;
+                right: 146px;
+            }
+            .box .point3 {
+                position: absolute;
+                top: 500px;
+                right: 300px;
+            }
+            .dian {
+                position: relative;
+                width: 8px;
+                height: 8px;
+                background-color: red;
+                border-radius: 50%;
+            }
+            @keyframes big {
+                0% {
+
+                }
+                70% {
+                    width: 40px;
+                    height: 40px;
+                    opacity: 1;
+                }
+                100% {
+                    /* transform: scale(4); */
+                    width: 70px;
+                    height: 70px;
+                    opacity: 0;
+                }
+                
+            }
+            .dian div[class^="pulse"]{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                box-shadow: 0 0 15px 2px rgb(229, 36, 52);
+                border-radius: 50%;
+                transform: translate(-50%,-50%);
+            }
+            
+            .pulse1 {
+                animation: big 1.5s linear 0.0s infinite;
+            }
+            .pulse2 {
+                animation: big 1.5s linear 0.7s infinite;
+            }
+            .pulse3 {
+                animation: big 1.5s linear 1.4s infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="point1">
+                <div class="dian">
+                    <div class="pulse1"></div>
+                    <div class="pulse2"></div>
+                    <div class="pulse3"></div>
+                </div>
+            </div>
+            <div class="point2">
+                <div class="dian">
+                    <div class="pulse1"></div>
+                    <div class="pulse2"></div>
+                    <div class="pulse3"></div>
+                </div>
+            </div>
+            <div class="point3">
+                <div class="dian">
+                    <div class="pulse1"></div>
+                    <div class="pulse2"></div>
+                    <div class="pulse3"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

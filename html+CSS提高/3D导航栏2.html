@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        li {
+            float: left;
+            list-style: none;
+            perspective: 500px;
+        }
+        .box {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            transform-style: preserve-3d;
+            transition: all .6s;
+        }
+        .box:hover {
+            transform-origin: center center -50px;
+            transform: rotateX(90deg);
+        }
+        .heads, 
+        .bottom {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        .heads {
+            backface-visibility: hidden;
+            background-color: aquamarine;
+        }
+        .bottom {
+            background-color: chartreuse;
+            transform: translateZ(-50px) translateY(50px) rotateX(-90deg);
+        }
+    </style>
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li>
+                    <div class="box">
+                        <div class="heads">123</div>
+                        <div class="bottom">abc</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="heads">123</div>
+                        <div class="bottom">abc</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="box">
+                        <div class="heads">123</div>
+                        <div class="bottom">abc</div>
+                    </div>
+                </li>
+                <li><div class="box">
+                        <div class="heads">123</div>
+                        <div class="bottom">abc</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type='text/javascript' src="vue.js"></script>
+    </head>
+    <!--   CSS   -->
+    <style>
+* {	
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.clearfix:before ,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.box1 {
+    width: 500px;
+    height: 500px;
+    background-color: aqua;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.box2 {
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    padding: 10px;
+}
+img {
+    filter: blur(5px);
+}
+.son {
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    background-color: #fff;
+}
+</style>
+    <body>
+        <div class="box1"></div>
+        <div class="box2">
+            <div class="son"></div>
+        </div>
+        <img src="../images/leijun.webp" alt="">
+    </body>
+</html>

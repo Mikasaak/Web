@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type='text/javascript' src="vue.js"></script>
+    </head>
+    <!--   CSS   -->
+    <style>
+* {	
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.clearfix:before ,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid black;
+    transition: all 800ms;
+    
+}
+.pic {
+    position: absolute;
+    display: flex;
+    transition: all 800ms;
+}
+.pic img {
+    width: 200px;
+    float: left;
+}
+.box:hover .pic{
+    transform: translateX(-200px);
+    
+    
+}
+</style>
+    <body>
+        <div class="box">
+            <div class="pic clearfix">
+                <img src="../images/shenhe.webp" alt="">
+                <img src="../images/leijun.webp" alt="">
+            </div>
+        </div>
+
+    </body>
+</html>

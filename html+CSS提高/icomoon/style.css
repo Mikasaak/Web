@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ysubte');
+  src:  url('fonts/icomoon.eot?ysubte#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ysubte') format('truetype'),
+    url('fonts/icomoon.woff?ysubte') format('woff'),
+    url('fonts/icomoon.svg?ysubte#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bing:before {
+  content: "\e900";
+  color: #008373;
+}
+.icon-epicgames:before {
+  content: "\e901";
+}
+.icon-github:before {
+  content: "\e902";
+}
+.icon-googledrive:before {
+  content: "\e903";
+  color: #4285f4;
+}
+.icon-steam:before {
+  content: "\e904";
+}
+.icon-tiktok:before {
+  content: "\e905";
+}
+.icon-visualstudio:before {
+  content: "\e906";
+  color: #5c2d91;
+}
+.icon-visualstudiocode:before {
+  content: "\e907";
+  color: #007acc;
+}
+.icon-webstorm:before {
+  content: "\e908";
+}
+.icon-wechat:before {
+  content: "\e909";
+  color: #7bb32e;
+}
+.icon-windows:before {
+  content: "\e90a";
+  color: #0078d6;
+}
+.icon-xbox:before {
+  content: "\e90b";
+  color: #107c10;
+}
+.icon-zhihu:before {
+  content: "\e90c";
+  color: #0084ff;
+}
+.icon-intellijidea:before {
+  content: "\e90d";
+}
+.icon-nintendoswitch:before {
+  content: "\e90e";
+  color: #e60012;
+}
+.icon-youtube2:before {
+  content: "\ea9e";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-html-five:before {
+  content: "\eae4";
+}
+.icon-git:before {
+  content: "\eae7";
+}
+.icon-undo:before {
+  content: "\e965";
+}
+.icon-redo:before {
+  content: "\e966";
+}
+.icon-undo2:before {
+  content: "\e967";
+}
+.icon-redo2:before {
+  content: "\e968";
+}
+.icon-forward:before {
+  content: "\e969";
+}
+.icon-reply:before {
+  content: "\e96a";
+}
+.icon-spinner7:before {
+  content: "\e980";
+}
+.icon-spinner9:before {
+  content: "\e982";
+}
+.icon-spinner11:before {
+  content: "\e984";
+}
+.icon-loop2:before {
+  content: "\ea2e";
+}

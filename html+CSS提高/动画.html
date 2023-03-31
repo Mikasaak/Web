@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        @keyframes move {
+                0% {
+                    transform: translate(0px,0px);
+                }
+                25% {
+                    transform: translate(1000px,0);
+                }
+                50% {
+                    transform: translate(1000px,1000px);
+                }
+                75% {
+                    transform: translate(0px,1000px);
+                }
+                100% {
+                    transform: translate(0px ,0px);
+                }
+            
+        }
+        @keyframes becomelong {
+            0% {
+                width: 0;
+            }
+            100% {
+                width: 200px;
+            }
+            
+        }
+        @keyframes movex {
+            0% {
+
+            }
+            100% {
+                transform: translateX(1000px);
+            }
+            
+        }
+        .test1 {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            animation-name: movex;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-delay: .5s;
+            animation-fill-mode: forwards;
+            /* animation-direction: ; */
+
+        }
+        .test2 {
+            display: inline-block;
+            overflow: hidden;
+            height: 32px;
+            background-image: linear-gradient(25deg, #4b90ed, #71abb3, #75c875, #5fe40a);
+            font-size: 18px;
+            line-height: 32px;
+            animation: becomelong 5s steps(11) infinite;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="test2">我正在刀子大妈狄拉克</div>
+    </body>
+</html>

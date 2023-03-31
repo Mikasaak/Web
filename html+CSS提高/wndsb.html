@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='UTF-8'>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script type='text/javascript' src="vue.js"></script>
+    </head>
+    <!--   CSS   -->
+    <style>
+* {	
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+.clearfix:before ,
+.clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after{
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color: pink;
+    margin: 100px auto;
+    box-shadow: 5px 5px 5px rgba(0,0,0,.3);
+    border-radius: 20px;
+    transition: all 800ms;
+    transition-timing-function: ease-in-out;
+}
+.box:hover {
+    transform:  translateX(200px) rotateZ(360deg);
+    
+}
+</style>
+    <body>
+        <div class="box">
+            <h1>******</h1>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            div{
+                position: relative;
+                margin: 100px auto;
+                margin-left: 500px;
+            }
+            div::after {
+                /* position: absolute; */
+                /* right: 300px; */
+                content: "";
+                transform: translate(-40px);
+                display: inline-block;
+                width: 200px;
+                height: 400px;
+                background-color: pink;
+                border: 2px solid black;
+                transition: all 600ms;
+                box-shadow: 5px 5px 5px red;
+            }
+            div::before {
+                /* position: absolute; */
+                /* z-index: 1; */
+                /* left: 300px; */
+                content: '';
+                transform: translate(40px);
+                display: inline-block;
+                width: 200px;
+                height: 400px;
+                background-color: green;
+                border: 2px solid black;
+                transition: all 600ms;
+                box-shadow: 5px 5px 5px red;
+            }
+
+            div:hover::after {
+                transform: translate(0);
+            }
+            div:hover:before {
+                transform: translate(0);
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
