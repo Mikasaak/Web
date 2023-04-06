@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            @keyframes move {
+                0% {
+                    background-position: 0% 0%; 
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }                
+            }
+        .bg {
+            width: min-content;
+            /* width: min-content; */
+            height: min-content;
+            /* height: min-content; */
+            background-image: linear-gradient(25deg, #8a0095, 
+            #9b6ead, #a0b7c5, #93ffdb, #c08d87, #99b68b, 
+            #51da8e,#db5883,#d16ba5, #c777b9,
+             #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec,
+             #79b3f4, #69bff8, #52cffe, #41dfff,
+              #46eefa, #5ffbf1);
+            background-repeat: no-repeat;
+            background-size: 1000%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: move 15s infinite linear;
+            font-size: 50px;
+            color: transparent;
+            /* background-position: 5px; */
+        }
+    </style>
+    </head>
+    <body>
+        <div class="bg">
+            123
+        </div>
+    </body>
+</html>
