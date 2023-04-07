@@ -1,0 +1,38 @@
+@bg-color: {background-color:  pink;};
+
+body {
+  @bg-color();
+}
+div {
+  @bg-color();
+
+}
+div {
+  @bg-color();
+
+}
+
+.items(@n , @i :1) when (@i <= @n) {
+  .item-@{i} {
+    flex: 1;
+    background-color: pink;
+  }
+  .items(@n , (@i + 1 ));
+}
+
+.nav {
+  .items(4)
+}
+.banner {
+  display: flex;
+  width: 540px;
+  background-color: #fff;
+  .items(6);
+  &:after {
+    content: "";
+  }
+  &：befor {
+    content: "";
+  }
+}
+
