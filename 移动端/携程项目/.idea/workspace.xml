@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96f21016-41c8-48c2-93cf-b8374ea75ad1" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/../flex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test-flex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../特殊样式.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../背景大小.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/mi'ka'sa/Desktop/Web/移动端/携程项目/upload",
+    "last_opened_file_path": "C:/Users/mi'ka'sa/Desktop/Web/移动端",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
@@ -84,6 +87,8 @@
       <workItem from="1680779069433" duration="5782000" />
       <workItem from="1680789138696" duration="1597000" />
       <workItem from="1680790946582" duration="4219000" />
+      <workItem from="1680825125146" duration="127000" />
+      <workItem from="1680827844057" duration="627000" />
     </task>
     <servers />
   </component>
