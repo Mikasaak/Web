@@ -6,30 +6,95 @@ a {
   text-decoration: none;
 }
 .box .item:nth-of-type(1) {
-  background-color: red;
-  background-image: url("../images/1_01.png");
+  width: 1919px;
+  height: 14px;
+  background-image: url("../../images/1_01.png");
 }
 .box .item:nth-of-type(2) {
-  background-color: skyblue;
-  background-image: url("../images/1_02.png");
+  width: 359px;
+  height: 1646.5px;
+  background-image: url("../../images/1_02.png");
 }
 .box .item:nth-of-type(3) {
-  background-color: green;
-  background-image: url("../images/1_03.png");
+  width: 1354px;
+  height: 1646.5px;
+  background-image: url("../../images/1_03.png");
 }
 .box .item:nth-of-type(4) {
-  background-color: yellow;
-  background-image: url("../images/1_04.png");
+  width: 1354px;
+  height: 1646.5px;
+  background-image: url("../../images/1_04.png");
 }
 .box .item:nth-of-type(5) {
-  background-color: purple;
-  background-image: url("../images/1_05.png");
+  width: 206px;
+  height: 1624.5px;
+  background-image: url("../../images/1_05.png");
 }
-.box .item:nth-of-type(6) {
-  background-color: orange;
-  background-image: url("../images/1_06.png");
+.box2 .items-1 {
+  width: 1919px;
+  height: 14px;
+  background-image: url("../../images/1_01.png");
+}
+.box2 .items-2 {
+  width: 359px;
+  height: 1646.5px;
+  background-image: url("../../images/1_02.png");
+}
+.box2 .items-3 {
+  width: 1354px;
+  height: 1646.5px;
+  background-image: url("../../images/1_03.png");
+}
+.box2 .items-4 {
+  width: 1354px;
+  height: 1646.5px;
+  background-image: url("../../images/1_04.png");
+}
+.box2 .items-5 {
+  width: 206px;
+  height: 1624.5px;
+  background-image: url("../../images/1_05.png");
+}
+.light {
+  color: pink;
+}
+.light2 {
+  color: #000;
+}
+@media (min-width: 768px) {
+  .element {
+    font-size: 1.2rem;
+  }
 }
 .test {
   width: 359px;
+}
+.class {
+  transform: translateX(50px) scale(1) rotate(2deg);
+}
+.box3 .select-1 {
+  width: 1919px;
+  height: 14px;
+  background-image: url("../../images/1_01.png");
+}
+.box3 .select-2 {
+  width: 359px;
+  height: 1646.5px;
+  background-image: url("../../images/1_02.png");
+}
+.box3 .select-3 {
+  width: 1354px;
+  height: 1646.5px;
+  background-image: url("../../images/1_03.png");
+}
+.box3 .select-4 {
+  width: 1354px;
+  height: 1646.5px;
+  background-image: url("../../images/1_04.png");
+}
+.box3 .select-5 {
+  width: 206px;
+  height: 1624.5px;
+  background-image: url("../../images/1_05.png");
 }
 /*# sourceMappingURL=less-test1.css.map */

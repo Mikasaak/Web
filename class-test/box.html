@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                list-style: none;
+            }
+
+            .box {
+                width: 500px;
+                height: 40px;
+                border-top: 3px solid #ff8500;
+                border-bottom: 1px solid #edeef0;
+                background-color: #fcfcfc;
+                color: #4c4c4c;
+                font-size: 14px;
+            }
+            .box ul {
+                display: flex;
+                width: 100%;
+                height: 100%;                
+            }
+            .box ul li  {
+                display: inline-block;
+            }
+            .box ul li a {
+                /* position: relative; */
+                /* display: flex; */
+                /* justify-content: center; */
+                height: 40px;
+                color: #4c4c4c;
+                padding: 0 20px;
+                font-size: 14px;
+                text-align: center;
+                line-height: 40px;
+                text-decoration: none;
+                
+            }
+            
+            /* .box ul li a::after {
+                position: absolute;
+                bottom: 0;
+                display: block;
+                content: "";
+                width: 0%;
+                height: 2px;
+                background-color:skyblue;
+                transition: all .5s;
+            }
+            .box ul li a:hover::after {
+                width: 100%;
+            } */
+
+
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <ul>
+                <li><a href="#">网站介绍</a></li>
+                <li><a href="#">学校介绍</a></li>
+                <li><a href="#">学员作品</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </body>
+</html>

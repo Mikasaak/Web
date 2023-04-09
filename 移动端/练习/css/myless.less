@@ -1,38 +1,60 @@
-@bg-color: {background-color:  pink;};
+// @colors: red,skyblue,green,yellow,purple,orange;
+// @lenth: length(colors);
+// @url: "../images/1_01.png";
+// @h-url: "C:\\Users\\mi'ka'sa\\Desktop\\Web\\images";
+// .creat-son2 (@name,@n) {
+//   .item2(@i : 1) when(@i <= @n) {
+//     @{name}-@{i} {
+//       @select-color: extract(@colors, @i);
+//       // flex: 1;
+//       // @i-w: image-width("../images/1_01.png");
+//       // width: @i-w;
+//       // image-width("file.png"); // 10px
+//       background-color: @select-color;
+//       // width: image-width("../../images/1_0@{i}.png");
+//       // @h:image-height("@{h-url}\1_0@{i}.png")*0.5;
+//       // height: @h;
+//       // background-image: url("../../images/1_0@{i}.png");
 
-body {
-  @bg-color();
-}
-div {
-  @bg-color();
+//     }
+//     .item2((@i + 1));
+//   }
+// }
 
-}
-div {
-  @bg-color();
-
-}
-
-.items(@n , @i :1) when (@i <= @n) {
-  .item-@{i} {
-    flex: 1;
-    background-color: pink;
+// @name2:select;
+// .box3 {
+  
+//   .creat-son2(@name2,5);
+// }
+@colors: red, skyblue, green, yellow, purple, orange;
+@lenth: length(@colors);
+@color: skyblue;
+.creat-son2(@name, @n) {
+  .item2(@i: 1) when (@i <= @n) {
+    .@{name}-@{i} {
+      @select-color: extract(@colors, @i);
+      background-color: @select-color;
+    }
+    .item2(@i + 1);
   }
-  .items(@n , (@i + 1 ));
 }
-
-.nav {
-  .items(4)
-}
-.banner {
-  display: flex;
-  width: 540px;
-  background-color: #fff;
-  .items(6);
-  &:after {
-    content: "";
+.creat-son (@name,@n,@i : 1) when(@i <= @n){
+  .@{name}-@{i}{
+    @select-color: extract(@colors, @i);
+     background-color: @select-color;
   }
-  &：befor {
-    content: "";
-  }
+  .creat-son( @name,@n ,(@i + 1));
 }
-
+@name2: select;
+.box3 {
+  .creat-son2(@name2, 5);
+}
+.box2 {
+	color: @color;
+}
+.box3 {
+  .creat-son(@name2, 5);
+}
+.box4 {
+  .creat-son(@name2, 5);
+}
