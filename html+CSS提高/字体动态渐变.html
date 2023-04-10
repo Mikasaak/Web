@@ -12,15 +12,16 @@
                 }
                 50% {
                     background-position: 100% 50%;
+                    transform: translateX(250px) translateY(250px) rotate(1440deg);
                 }
                 100% {
                     background-position: 0% 50%;
                 }                
             }
         .bg {
-            width: min-content;
+            width: max-content;
             /* width: min-content; */
-            height: min-content;
+            height: max-content;
             /* height: min-content; */
             background-image: linear-gradient(25deg, #8a0095, 
             #9b6ead, #a0b7c5, #93ffdb, #c08d87, #99b68b, 
@@ -32,16 +33,42 @@
             background-size: 1000%;
             background-clip: text;
             -webkit-background-clip: text;
-            animation: move 15s infinite linear;
-            font-size: 50px;
+            /* animation: move 15s infinite linear; */
+            font-size: 20px;
             color: transparent;
             /* background-position: 5px; */
         }
+        .circular{
+	width: 200px;
+	height: 200px;
+	margin: 100px;
+
+}
+.circular path { fill: none; }
+.circular svg { display: block; overflow: visible; }
     </style>
     </head>
     <body>
+
         <div class="bg">
-            123
         </div>
-    </body>
-</html>
+        <note>
+            <to>Tove</to>
+            <from>Jani</from>
+            <heading>Reminder</heading>
+            <body>Don't forget me this weekend!</body>
+        </note>
+
+        <div class="circular">
+            <svg>
+
+                <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle" />
+                    <text fill="transparent">
+                        <textPath xlink:href="#circle">
+                            张倚天·大SB！！！
+                        </textPath>
+                    </text>
+                </svg>
+            </div>
+        </body>
+    </html>
