@@ -1,0 +1,112 @@
+@import "common";
+body {
+  min-width: 320px;
+  width: 15rem;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-family: Arial, Heletica, sans-serif;
+  background-color: #f2f2f2;
+
+}
+.clearfix:after,.clearfix:before{
+  content: "";
+  display: table;
+}
+.clearfix:after{
+  clear: both;
+}
+.clearfix{
+  *zoom: 1;
+}
+@base-font: 50;
+.search-content {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15rem;
+  height: (88rem / @base-font);
+  background-color: #ffc001;
+  .classify {
+    width: (44rem / @base-font);
+    height: (70rem / @base-font);
+    margin: (11rem / @base-font) (25rem / @base-font)
+      (7rem / @base-font) (24rem / @base-font);
+    //background-color: pink;
+    background: url(../images/classify.png) no-repeat;
+    background-size: (44rem / @base-font) (70rem / @base-font);
+  }
+  .search {
+    flex: 1;
+    //background-color: skyblue;
+    input {
+
+      height: (66rem / @base-font);
+      width: 100%;
+      margin-top: (12rem / @base-font);
+      border: 0;
+      border-radius: (66rem / 2 / @base-font);
+      font-size: (25rem / @base-font);
+      text-indent: (55rem / @base-font);
+      color: #757575;
+      outline: none;
+    }
+  }
+  .login {
+    width: (75rem / @base-font);
+    height: (70rem / @base-font);
+    margin: (10rem / @base-font);
+    font-size: (25rem / @base-font);
+    line-height: (70rem / @base-font);
+    text-align: center;
+    color: #fff;
+    //background-color: green;
+  }
+}
+.banner {
+  img {
+    width: 15rem;
+    height: auto;
+  }
+}
+.ad {
+  display: flex;
+  width: 15rem;
+  a {
+    flex: 1;
+  }
+  a img {
+    width: 100%;
+  }
+}
+.nav {
+  //display: flex;
+  //flex-wrap: wrap;
+  margin-top: (5rem / @base-font);
+  width: 100%;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.3);
+  a {
+    float: left;
+    width: (150rem / @base-font);
+    height: (140rem / @base-font);
+    //background-color: pink;
+    img {
+      display: block;
+      width: (82rem / @base-font);
+      height: auto;
+      margin: (10rem / @base-font) auto 0;
+    }
+    span {
+      display: block;
+      font-size: (25rem / @base-font);
+      text-align: center;
+
+    }
+  }
+
+}
+.main {
+  width: 100%;
+  height: 55rem;
+}

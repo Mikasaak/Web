@@ -1,0 +1,32 @@
+@part: 15;//分成的份数
+@widths:320px,360px,375px,348px,400px,414px,424px,480px,540px,720px,750px;
+@lengths: length(@widths);
+.creat-media(@widths,@lengths,@i:1) when(@i <= @lengths) {
+    @w:extract(@widths,@i);
+    @media screen and (min-width: @w) {
+        font-size: (@w / @part);
+    }
+  .creat-media(@widths, @lengths,(@i + 1))
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+html {
+
+  .creat-media(@widths, @lengths);
+}
