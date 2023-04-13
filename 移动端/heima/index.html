@@ -7,6 +7,8 @@
     <title>黑马面面</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/swiper.min.js"></script>
     <script src="js/flexible.js"></script>
 </head>
 <body>
@@ -15,33 +17,82 @@
         <div class="bottom">
         </div>
     </header>
-    <nav class="nav">
-        <a href="#" class="item">
-            <img src="./icons/icon1.png" alt="">
-            <span>HR面试</span>
-        </a>
-        <a href="#" class="item">
-            <img src="./icons/icon2.png" alt="">
-            <span>笔试</span>
-        </a>
-        <a href="#" class="item">
-            <img src="./icons/icon3.png" alt="">
-            <span>技术面试</span>
-        </a>
-        <a href="#" class="item">
-            <img src="./icons/icon4.png" alt="">
-            <span>模拟面试</span>
-        </a>
+    <section class="warp">
+        <nav class="nav">
+            <a href="#" class="item">
+                <img src="./icons/icon1.png" alt="">
+                <span>HR面试</span>
+            </a>
+            <a href="#" class="item">
+                <img src="./icons/icon2.png" alt="">
+                <span>笔试</span>
+            </a>
+            <a href="#" class="item">
+                <img src="./icons/icon3.png" alt="">
+                <span>技术面试</span>
+            </a>
+            <a href="#" class="item">
+                <img src="./icons/icon4.png" alt="">
+                <span>模拟面试</span>
+            </a>
 
-        <a href="#" class="item">
-            <img src="./icons/icon5.png" alt="">
-            <span>面试技巧</span>
-        </a>
+            <a href="#" class="item">
+                <img src="./icons/icon5.png" alt="">
+                <span>面试技巧</span>
+            </a>
 
-        <a href="#" class="item">
-            <img src="./icons/icon6.png" alt="">
-            <span>薪资查询</span>
-        </a>
-    </nav>
+            <a href="#" class="item">
+                <img src="./icons/icon6.png" alt="">
+                <span>薪资查询</span>
+            </a>
+        </nav>
+        <section class="go">
+            <img src="./images/go.png" alt="">
+        </section>
+
+    </section>
+    <section class="content">
+        <div class="ss-hd">
+            <h2>就业指导</h2>
+            <a href="#" class="more">更多&gt;&gt;</a>
+        </div>
+        <div class="get-job-focus">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div> ·   ·
+                    <div class="swiper-slide">Slide 10</div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <script>
+                (function (){
+                    var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                    centeredSlides: true,
+                    loop: true,
+                        navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                        },
+                });})()
+            </script>
+        </div>
+
+    </section>
+<!--    <div class="test"></div>-->
+<!--    <div class="test"></div>-->
 </body>
 </html>

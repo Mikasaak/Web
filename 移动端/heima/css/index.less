@@ -39,6 +39,7 @@ body {
   max-width: 750px;
   margin: 0 auto;
   height: 1200px;
+  background-color: #F2F4F7;
 }
 body {
   @media screen and (min-width: 750px) {
@@ -66,7 +67,8 @@ html {
   position: relative;
   height: 2.133rem;
   border-bottom: 0.027rem solid #EAEAEA;
-  margin-top: 0.373rem;
+  padding-top: 0.373rem;
+  background-color: #ffffff;
   text-align: center;
   line-height: 2.133rem;
   font-size: 0.933rem;
@@ -83,12 +85,15 @@ html {
     border-radius: 1.653rem;
   }
 }
-
+.warp {
+  background-color: #ffffff;
+}
 .nav {
 
   display: flex;
   flex-wrap: wrap;
-  margin-top: 1.2rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.6rem;
   .item {
     display: flex;
     flex-direction: column;
@@ -103,5 +108,94 @@ html {
       color: #707070;
       font-size: 0.667rem;
     }
+    //&:nth-child(1) {
+    //  margin-bottom: 1.067rem;
+    //}
+  }
+  .item:nth-child(-n+3) {
+    margin-bottom: 1.84rem;
+  }
+}
+.test {
+  width: 100%;
+  height: 2.667rem;
+  background-color: #ffffff;
+}
+.go {
+  //width: 100%;
+  padding-left: 0.48rem;
+  padding-right: 0.267rem;
+  padding-bottom: 1.147rem;
+  img {
+    //padding-left: 0.48rem;
+    //padding-right: 0.48rem;
+    width: 100%;
+  }
+
+}
+.content {
+  //display: flex;
+  //flex-direction: column;
+  margin-top: 0.267rem;
+  background-color: #ffffff;
+  .ss-hd {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 1.013rem;
+    padding:1.067rem 1.013rem 0;
+    //background-color: pink;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 0.747rem;
+    font-weight: Bold;
+    color: #333333;
+  }
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 1.013rem;
+    height: 1.013rem;
+    margin-right: 0.133rem;
+    background: url(../icons/i2.png) no-repeat;
+    background-size: 1.013rem;
+
+
+  }
+  .more {
+    font-size:0.587rem;
+    color: #999999;
+  }
+}
+.get-job-focus {
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    transition: 300ms;
+    transform: scale(0.8);
+  }
+  .swiper-slide-active,.swiper-slide-duplicate-active{
+    transform: scale(1);
   }
 }
