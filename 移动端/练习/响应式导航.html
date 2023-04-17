@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .nav {
+            width: 750px;
+            margin: 0 auto;
+        }
+
+        .nav ul li {
+            float: left;
+            /*width: 93.75px;*/
+            background-color: green;
+            border: 1px solid #000;
+        }
+
+        @media screen and (max-width: 750px) {
+            .nav {
+                width: 100%;
+            }
+
+            .nav ul {
+                padding: 0;
+                margin: 0;
+                width: 100%;
+
+            }
+
+            .nav ul li {
+                width: 33.3%;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul>
+        <li>导航格1</li>
+        <li>导航格2</li>
+        <li>导航格2</li>
+        <li>导航格2</li>
+        <li>导航格2</li>
+        <li>导航格2</li>
+        <li>导航格2</li>
+        <li>导航格2</li>
+    </ul>
+</div>
+</body>
+</html>
