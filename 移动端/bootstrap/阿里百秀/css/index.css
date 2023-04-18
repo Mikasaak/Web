@@ -28,8 +28,13 @@ header .logo {
   background-color: #3796da;
   text-align: center;
 }
+header .logo p {
+  padding: 0;
+  margin: 0;
+}
 header .logo img {
   max-width: 100%;
+  margin: auto auto;
 }
 header .nav {
   background-color: #eee;
@@ -38,7 +43,7 @@ header .nav {
 header .nav ul {
   width: 100%;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
   header .nav ul li {
     float: left;
     width: 20%;
@@ -59,6 +64,11 @@ header .nav ul li a::before {
 header .nav ul li a:hover {
   color: #333;
   background-color: #fff;
+}
+@media screen and (max-width: 991px) {
+  article {
+    margin-top: 10px;
+  }
 }
 article .news {
   width: 100%;
@@ -119,5 +129,31 @@ article .news li:first-child p {
 }
 .publish .row .pic img {
   width: 100%;
+}
+aside .banner {
+  display: block;
+}
+aside .banner img {
+  width: 100%;
+}
+aside .hot {
+  display: block;
+  margin-top: 20px;
+  padding: 0 20px 20px 20px;
+  border: 1px solid #ccc;
+}
+aside .hot button {
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+aside .hot h4 {
+  margin: 10px 0 10px;
+  color: #337abe;
+}
+aside .hot p {
+  color: #666666;
+}
+aside .hot p:hover {
+  color: #23527c;
 }
 /*# sourceMappingURL=index.css.map */

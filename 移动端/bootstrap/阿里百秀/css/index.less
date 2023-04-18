@@ -33,20 +33,28 @@ header {
   .logo {
     background-color: #3796da;
     text-align: center;
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+
+
     img {
       max-width: 100%;
+      margin: auto auto;
     }
   }
 
   .nav {
     background-color: #eee;
     border-bottom: 1px solid #ccc;
+
     ul {
       width: 100%;
 
       li {
-        @media screen and (max-width: 767px)
-        {
+        @media screen and (max-width: 991px) {
           float: left;
           width: 20%;
         }
@@ -76,6 +84,10 @@ header {
 }
 
 article {
+  @media screen and(max-width: 991px) {
+    margin-top: 10px;
+  }
+
   .news {
     width: 100%;
 
@@ -154,4 +166,40 @@ article {
   }
 
 
+}
+
+aside {
+
+  .banner {
+    display: block;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .hot {
+    display: block;
+    margin-top: 20px;
+    padding: 0 20px 20px 20px;
+    border: 1px solid #ccc;
+
+    button {
+      border-radius: 0;
+      margin-bottom: 20px;
+    }
+
+    h4 {
+      margin: 10px 0 10px;
+      color: #337abe;
+    }
+
+    p {
+      color: #666666;
+
+      &:hover {
+        color: #23527c;
+      }
+    }
+  }
 }
