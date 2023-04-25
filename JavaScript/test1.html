@@ -6,12 +6,104 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <script>
-            var a = '456';
-            var b = '456';
-            var c = a + b;
-            document.write(c);
 
+            function test1()
+            {
+                let nums  = [1,'sakana',null,undefined,true];
+                let ary = new Array();
+                nums.push(11);
+                nums.unshift('sb')
+                nums[1] = 2;
+                console.log(typeof ary);
+                if (ary == null)
+                {
+                    document.write("ary is null" + "<br>");
+                }
+                else
+                {
+                    document.write("ary is not null" + "<br>");
+                }
+                document.write("length: " + nums.length + "<br>");
+                nums[9]=0; 
+                document.write("NOT reverse" + "<br>");
+                for(let num of nums)
+                {
+                    document.write(num + ' ' + typeof(num) + "<br>");
+                }
+                document.write(" <br> <br> reverse" + "<br>");
+                for(let num of nums.reverse())
+                {
+                    document.write(num + ' ' + typeof(num) + "<br>");
+                }
+                document.write("length: " + nums.length + "<br>");
+                return 0;
+            };
+            function test2() {
+                let max=Number.MIN_VALUE;
+                for(let ele of arguments)
+                {
+                    if (ele > max)
+                    {
+                        max = ele;
+                    }
+
+                }
+                document.write("max: " + max + "<br>");
+            }
+            function test3() {
+                let map = new Map();
+                map.set('a',1);
+                map.set('b',2);
+                map.set('c',3);
+                map.set('d',4);
+                map.set('e',5);
+                map.set('f',6);
+                for(let [key,value] of map)
+                {
+                    document.write(key + " : " + value + "<br>");
+                }
+            }
+            // test2(11,98,100,33);
+            class Person {
+                constructor(name)
+                {
+                    this.name = name;
+                }
+                say()
+                {
+                    document.write("name: " + this.name + "<br>");
+                }
+            }
+            function quote_obj( obj ) {
+                obj.name = "sakana";
+                obj = new Person("misaka");
+                return obj;
+            }
+            function test4() {
+                obj = new Person();
+                quote_obj(obj);
+                obj.say();
+            }
+            function test5() {
+                obj=new Person("sakana");
+                document.write(obj instanceof Person);
+            }
+            // test5();
+            var obj = {
+                name : "yzh",
+                age : 18,
+                say() {
+                    document.write("name: " + this.name + "<br>");
+                }
+            }
+            obj.say();
+            
         </script>
+        <style>
+            .box {
+                vertical-align: top;
+            }
+        </style>
     </head>
     <body>
 

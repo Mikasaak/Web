@@ -1,0 +1,7 @@
+.box {
+  color: #000;
+}
+
+.box .box__inner {
+  color: #fff;
+}
