@@ -4,63 +4,47 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>计算机学院</title>
-        <style>
-            * {
-            margin: 0;
-            padding: 0;
-
-            }
-        .all{
-    height: 160px;
-    width: 300px;
-    margin: 20px auto;
-    /* margin-top: 20px;
-    margin-bottom: 20px; */
-    /* align-items: center; */
-    border: 1px solid #D9E0EE;
-    border-top: 3px solid #FF8400;
-}
-h2{
-    height: 35px;
-    padding-left: 10px;
-    font-size: 18px;
-    line-height: 35px;
-}
-ul{
-    
-
-    border-top: 1px solid #D9E0EE;
-    padding: 5px 0 0 10px;
-}
-li{
-    list-style-type: none;
-    line-height: 24px;
-    padding-left: 18px;
-    font-size: 12px;
-    background-image: url("./qipao.jpg");
-    background-repeat: no-repeat;
-    background-position: 1px 2px;
-}
-a{
-    text-decoration-line: none;
-    color: #3c3c3c;
-}
-a:hover{
-    color: #FF8400;
-    text-decoration-line: underline;
-}
-    </style>
+        <title>Document</title>
     </head>
     <body>
-        <div class="all">
-            <h2>学院动态</h2>
-            <ul>
-                <li><a href="#">计算机学院人才招聘会成功举行</a></li>
-                <li><a href="#">计算机科学与技术专业学生风采</a></li>
-                <li><a href="#">软件工程专业学生风采</a></li>
-                <li><a href="#">快来参加网页设计大赛啦</a></li>
-            </ul>
-        </div>
+        <script>
+        function randomInt(min,max)
+        {
+
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function guess_Num() {
+            let num = randomInt(1,10);
+            console.log(num);
+            while (true)
+            {
+                let guess = prompt("请输入一个1-10数字")
+                if (guess == num)
+                {
+                    alert("猜对了");
+                    break;
+                }
+                else if (guess > num)
+                {
+                    alert("猜大了");
+                    continue;
+                }
+                else
+                {
+                    alert("猜小了");
+                    continue;
+                }
+            }
+        }
+        (function date_Demo(){
+            let now = new Date('2022-10-27 8:8:8');
+
+            document.write(now + "<br>");
+        })();
+        const date = new Date();
+const formattedDate = `${date.getFullYear()}-${(date.getMonth()+1).toString().padStart(2,'0')}-${date.getDate().toString().padStart(2,'0')} ${date.getHours().toString().padStart(2,'0')}:${date.getMinutes().toString().padStart(2,'0')}:${date.getSeconds().toString().padStart(2,'0')}`;
+console.log(formattedDate);
+
+    </script>
     </body>
 </html>

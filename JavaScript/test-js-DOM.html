@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            button:nth-child(2) {
+                background-color: pink;
+            }
+            .img {
+                width: 500px;
+                height: 500px;
+                background-color: skyblue;
+                display: block;
+            }
+            .hellow {
+                font-size: 25px;
+                margin: 10px 0;
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <button>显示当前系统时间</button>
+        <button>刷新</button>
+        <p>Time</p>
+        <div class="hellow">
+
+        </div>
+
+        <button class="fir">第一张</button>
+        <button class="sec">第二张</button>
+        <br>
+        <img src="img\kokomi.png" alt="">
+        <script>
+            let time = Number(prompt('请输入时间'));
+            console.log(time);
+            let date = new Date();
+            date.setHours(time);
+            console.log(date);
+            let h = date.getHours();
+            if(h >12) {
+                document.querySelector('.hellow').innerHTML = '下午好';
+            } 
+            else if(h > 6) {
+                document.querySelector('.hellow').innerHTML = '上午好';
+            } 
+            else if(h > 0) {
+                document.querySelector('.hellow').innerHTML = '凌晨好';     
+            }
+            let fir = document.querySelector('.fir');
+            console.log(fir);
+            let sec = document.querySelector('.sec');
+            console.log(sec);
+            let img = document.querySelector('img');
+            fir.onclick = function () {
+                img.src = "img/zhongli.jpg";
+            }
+            sec.onclick = function () {
+                img.src = "img/ganyu.jpg";
+            }
+        </script>
+        <script>
+            document.querySelector('button').onclick = function () {
+                let now = new Date();
+                document.querySelector('p').innerHTML = now.toLocaleString();
+            }
+            document.querySelector('button:nth-child(2)').onclick = function () {
+                let now = new Date();
+                document.querySelector('p').innerHTML = 'Time';
+            }
+        </script>
+        <br>
+
+    </body>
+</html>

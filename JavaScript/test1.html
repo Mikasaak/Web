@@ -37,7 +37,7 @@
                 }
                 document.write("length: " + nums.length + "<br>");
                 return 0;
-            };
+            }
             function test2() {
                 let max=Number.MIN_VALUE;
                 for(let ele of arguments)
@@ -96,18 +96,115 @@
                     document.write("name: " + this.name + "<br>");
                 }
             }
-            obj.say();
+            function test6() {
+                let num = 150;
+                let string_num = "ff";
+                let num_16 = parseInt(string_num,16);
+                document.write("num_16: " + num_16 + "<br>");
+                let string = num.toString(2);
+                document.write("string: " + string + "<br>");
+                document.write("num type:" + typeof num + "<br>");
+                document.write("string_num type:" + typeof string+ "<br>");
+                // obj.say();
+                let eight = 0o77;
+                document.write("eight: " + eight + "<br>");
+            }
+            function test7(){
+                let num_s='1 1';
+                let num = Number(num_s);
+                let num_2 = parseInt(num_s);
+                document.write("Number-num: " + num + "<br>");
+                document.write("parseInt-num: " + num_2 + "<br>");
+
+            }
+            // test7();
+            function test8() {
+                let a = 6;
+                let b = 9;
+                let c = 10;
+                function simpleTag(strings,...expressions) 
+                {
+                 console.log(strings);
+                //  console.log(aValExpression);
+                //  console.log(bValExpression);
+                //  console.log(sumExpression);
+                 return 'foobar';
+                }
+                let untaggedResult = `${ a } + ${ b } + ${c} = ${ a + b + c}`;
+                console.log(untaggedResult);
+                let taggedResult = simpleTag`${ a } + ${ b } + ${c} = ${ a + b + c}`;
+                console.log(taggedResult);
+                let arr = new Array('1','2','3');
+                console.log(arr);
+            }
+            // test8();
+            const key = Symbol('key');
+            function ConstructorTest(name , age , symbol) {
+                this.name = name;
+                this.age = age;
+                this[key] = symbol;
+            } 
+            function test11(){
+                let mysymbol = Symbol('sakana');
+                let myobj = new Object(mysymbol);
+                console.log(myobj);
+            }
+            // test11();  
+            (function test (){
+                class Person {
+                    constructor(name,age)
+                    {
+                        this.name = name;
+                        this.age = age;
+                    }
+                    say()
+                    {
+                        document.write("name: " + this.name + "<br>");
+                    }
+                }
+                let obj = new Person("sakana",18);
+                document.write(obj instanceof Person);
+            });
+            
+            (function test (){
+                let now = new Date();
+                let time = new Date('2023-4-30 22:00:00')
+                let time_num = (time - now) / 1000;
+                let s = parseInt(time_num % 60);
+                let m = parseInt(time_num / 60 % 60);
+                let h = parseInt(time_num / 60 / 60 % 24);
+                document.write(now + "<br>") ;
+                document.write(time + "<br>") ;
+                document.write('距离2023年4月30日22点还有' + h + '小时' + m + '分钟' + s + '秒');
+            });
+            (function (){
+                let str= 'abcoefoxyozzopp';
+                let obj = new Object();
+                for(let char_mamber of str)
+                {
+                    obj[char_mamber] = obj[char_mamber] + 1 || 1;
+                }
+                console.log(obj);
+
+            });
+            (function() {
+                function Person (name){
+                    this.name =  name;
+                }
+                let obj = new Person('sakana');
+                document.write('obj.name-origin' + obj.name + "<br>");
+                (function(obj){
+                    obj = new Person('misaka');
+                    document.write('obj.name-fc' + obj.name + "<br>");
+                })(obj);
+                document.write('obj.name-3' + obj.name + "<br>");
+            })();
+
+
             
         </script>
-        <style>
-            .box {
-                vertical-align: top;
-            }
-        </style>
     </head>
     <body>
-
-
 
     </body>
 </html>
