@@ -38,13 +38,41 @@
                 border: none;
                 outline: none;
             }
+            .box1 {
+                width: 100px;
+                height: 100px;
+                background-color: skyblue;
+                transition: all .5s;
+            }
+            .mybtn {
+                margin-top: 50px;
+                width: 80px;
+                height: 40px;
+               
+                background-color: skyblue;
+                border-radius: 20px;
+                border: 1px solid #ccc;
+            }
+            .mybtn .shifth_btn{
+                display: block;
+                width: 40px;
+                height: 40px;
+                background-color: gray;
+                border-radius: 50%;
+                
+                transition: all .5s;
+            }
 
         </style>
     </head>
     <body>
         <div class="box">
-            <input type="password" name="password" id="password">
+            <input type="password" name="password" id="password"
+                placeholder="请输入密码">
             <button id="btn">显示密码</button>
+        </div>
+        <div class="box1">
+
         </div>
         <script>
             let btn = document.querySelector('#btn');
@@ -60,6 +88,56 @@
                     password.type = 'password';
                     flag = 0;
                     btn.innerHTML = '显示密码';
+                }
+            }
+            password.onfocus = function () {
+                password.placeholder = '';
+            }
+            password.onblur = function () {
+                password.placeholder = '请输入密码';
+            }
+            password.on
+        </script>
+        <script>
+
+            let element = document.querySelector('.box1');
+            let flag_box = true;
+            element.onclick = function () {
+                if(flag_box == true){
+                    element.style.backgroundColor = 'red';
+                    element.style.width = '200px'
+                    flag_box=false;
+                }
+                else {
+                    element.style.backgroundColor = 'skyblue';
+                    element.style.width = '100px'
+                    flag_box=true;
+                }   
+            }
+            
+            
+        </script>
+        <div class="mybtn">
+            <div class="shifth_btn"></div>
+        </div>
+        <script>
+            let mybtn = document.querySelector('.mybtn');
+            console.log(mybtn);
+            let shifth_btn = document.querySelector('.shifth_btn');
+            console.log(shifth_btn);
+            let flag_mybtn_isopen = false;
+            shifth_btn.onclick = function () {
+                if(flag_mybtn_isopen == false) {
+                    shifth_btn.style.transform = 'translateX(40px)';
+                    shifth_btn.style.backgroundColor="greenyellow"
+                    mybtn.style.backgroundColor = 'green';
+                    flag_mybtn_isopen = true;
+                }
+                else {
+                    shifth_btn.style.transform = 'translateX(0px)';
+                    shifth_btn.style.backgroundColor = 'gray';
+                    mybtn.style.backgroundColor = 'skyblue';
+                    flag_mybtn_isopen = false;
                 }
             }
         </script>

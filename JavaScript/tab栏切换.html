@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            li {
+                list-style: none;
+            }
+            ul {
+                display: flex;
+                width: 400px;
+            }
+            .head li {
+                flex: 1;
+                border: 1px solid #000;
+                cursor: pointer;
+            }
+            .list_active {
+                background-color: pink;
+                color: aliceblue;
+            }
+            .content .item{
+                width: 400px;
+                display: none;
+            }
+            .content .content_item_v {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <ul>
+                <li class="list list_active">第一部分</li>
+                <li class="list">第二部分</li>
+                <li class="list">第三部分</li>
+                <li class="list">第四部分</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="item content_item_v">11111</div>
+            <div class="item">22222</div>
+            <div class="item">33333</div>
+            <div class="item">44444</div>
+        </div>
+        <script>
+            let lists = document.querySelector('.head').querySelectorAll('li');
+            console.log(lists);
+            let contents = document.querySelectorAll('.content .item');
+            console.log(contents);
+            for(let i = 0; i<lists.length;i++) {
+                lists[i].addEventListener('click', function(){
+                    console.log(i);
+                    for(let list of lists){
+                        list.classList.remove('list_active');
+                    }
+                    this.classList.add('list_active');
+                    for(let content of contents){
+                        content.classList.remove('content_item_v');
+                    }
+                    contents[i].classList.add('content_item_v');
+                })
+                
+            }
+        </script>
+    </body>
+</html>

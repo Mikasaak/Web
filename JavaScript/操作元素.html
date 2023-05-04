@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        .sjjy {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        input[type = "text"],
+        input[type = "password"] {
+            outline: none;
+            color: #ccc;
+        }
+        .pwd {
+            position: relative;
+        }
+        .test {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            transition: all .5s;
+        }
+        .test::after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 30px;
+            background-color: pink;
+        }
+        .change::after {
+            background-color: red;
+        }
+        .look {
+            position: absolute;
+            left: 170px;
+            top: 2px;
+            width: 40px;
+            height: 20px;
+
+        }
+        .close-box {
+            width: 100px;
+            height: 100px;
+            margin: 200px auto;
+            background-color: skyblue;
+            position: relative;
+        }
+        .close-box .btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            line-height: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="sjjy">
+            <input type="text" name="phone" value="请输入手机号">
+            <div class="pwd">
+                <input type="text" name="password" value="请输入密码">
+                <button class="look">0</button>
+            </div>
+
+            <input type="button" value="登录">
+        </div>
+        <script>
+            let text = document.querySelector("input[type=text]");
+            let password = document.querySelector("input[name=password]");
+            let btn = document.querySelector("input[type=button]");
+            let look = document.querySelector(".look");
+            text.addEventListener("focus", function() {
+                this.style.border = "1px solid pink";
+                if(this.value == '请输入手机号'){
+                    this.value = '';
+                    this.style.color = "#000";
+                }
+                else{
+                    this.style.color = "#000";
+                }
+            })
+            text.addEventListener("blur", function() {
+                this.style.border = "1px solid #000";
+                if(this.value == ''){
+                    this.value = '请输入手机号';
+                    this.style.color = "#ccc";
+                }
+                else{
+                    this.style.color = "#ccc";
+                }
+                
+            })
+            password.addEventListener("focus", function() {
+                this.style.border = "1px solid pink";
+                if(this.value == '请输入密码'){
+                    this.type = "password";
+                    this.value = '';
+                    this.style.color = "#000";
+                }
+                else{
+                    this.style.color = "#000";
+                }
+            })
+            password.addEventListener("blur", function() {
+                this.style.border = "1px solid #000";
+                if(this.value == ''){
+                    this.value = '请输入密码';
+                    this.type = "text";
+                    this.style.color = "#ccc";
+                }
+                else{
+                    this.style.color = "#ccc";
+                }
+                
+            })
+            look.addEventListener("click", function() {
+                if(this.innerHTML == 0){
+                    this.innerHTML = 1;
+                    password.type = "text";
+                }
+                else{
+                    this.innerHTML = 0;
+                    password.type = "password";
+                }
+            })
+            
+        </script>
+        <div class="test" id="my-element"></div>
+        <script>
+            let test = document.querySelector(".test");
+            test.addEventListener("click", function() {
+                test.classList.toggle("change");
+            })
+        </script>
+        <div class="close-box">
+            <div class="btn">*</div>
+        </div>
+        <script>
+            let close_btn = document.querySelector(".close-box .btn");
+            let close_box = document.querySelector(".close-box");
+            close_btn.onclick = function() {
+                close_box.style.display = "none";
+            }
+        </script>
+    </body>
+</html>

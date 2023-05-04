@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table {
+                border: 1 solid #ccc;
+            }
+            table thead tr td:first-of-type {
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <table border="1" cellspacing="0">
+            <thead>
+                <tr>
+                    <td> 姓 名 </td><td>年龄</td><td>性别</td><td>操作</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <script>
+            let peoples = [
+                {
+                    name : '于正浩',
+                    age: 21,
+                    sex: '男'
+                },
+                {
+                    name : '张伊坦',
+                    age: 12,
+                    sex: '男'
+                },
+                {
+                    name : '王宁',
+                    age: 21,
+                    sex: '男'
+                },
+                {
+                    name : '张倚天',
+                    age: 21,
+                    sex: '男'
+                },
+                {
+                    name : '于正浩',
+                    age: 21,
+                    sex: '男'
+                },
+                {
+                    name : '于正浩',
+                    age: 21,
+                    sex: '男'
+                }
+            ]
+            for(let i=0;i<peoples.length;i++) {
+                let row = document.createElement('tr');
+                let tbody = document.querySelector('tbody');
+                tbody.appendChild(row);
+                let this_row = document.querySelectorAll('tbody tr')[i]
+                for(let key in peoples[i]){
+                    let cell = document.createElement('td');
+                    cell.innerHTML = peoples[i][key];
+                    this_row.appendChild(cell);
+                }
+                let link = document.createElement('td');
+                link.innerHTML = '<a href="javascript:;">删除</a>';
+                this_row.appendChild(link);
+                // console.log(link);
+            }
+            let del = document.querySelectorAll('tbody a');
+            for(let a of del) {
+                let grand = a.parentNode.parentNode;
+                    // console.log(grand);
+                a.addEventListener('click',function functionName() {
+                    grand.parentNode.removeChild(grand);
+                    // a.parentNode.parentNode.removeChild(a.parentNode);
+                })
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            li {
+                width: 200px;
+            }
+            li a {
+                float: right;
+            }
+            .box {
+                width: 50px;
+                height: 50px;
+                background-color: pink;
+            }
+    </style>
+    </head>
+    <body>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button>发布</button>
+        <h4>评论区</h4>
+
+        <ul>
+        </ul>
+        <div class="box">
+
+        </div>
+        <script>
+            let text = document.querySelector('textarea');
+            console.log(text);
+            let btn = text.nextElementSibling;
+            console.log(btn);
+            let ul = document.querySelector('ul');
+            console.log(ul);
+            btn.addEventListener('click' ,function() {
+                if(text.value==''){
+                    alert("消息为空")
+                }
+                else {
+                    let newli = document.createElement('li');
+                    newli.innerHTML = text.value + '<a href="javascript:;">删除</a>';
+                    // console.log(ul.children[0]);
+                    // if(!ul.children[0]){
+                    //     ul.appendChild(newli);
+                    // }
+                    ul.insertBefore(newli,ul.children[0]);
+                    text.value = '';
+                }
+                let links = document.querySelectorAll('a');
+                console.log('link:' + links.length);
+                for(let link of links){
+                    link.addEventListener('click', function (){
+                        ul.removeChild(this.parentNode);
+                    })
+                }
+            })
+            
+        </script>
+        <script>
+            document.querySelector('.box').addEventListener('click' ,function() {
+                this.remove();
+            })
+        </script>
+    </body>
+</html>

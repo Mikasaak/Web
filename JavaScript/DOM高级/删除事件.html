@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border: 1px solid #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+<script>
+    let divs = document.querySelectorAll('div');
+    divs[0].addEventListener('click', function fn(){
+        alert(11);
+        this.removeEventListener('click',fn);
+    })
+    divs[1].onclick=function () {
+        alert(22);
+        this.onclick = null;
+    }
+</script>
+</body>
+</html>

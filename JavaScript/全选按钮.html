@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <td><input type="checkbox" name="" id="all"></td>
+                    <td>全选</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" name="" id="1"></td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="2"></td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="3"></td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" id="4"></td>
+                    <td>4</td>
+                </tr>
+            </table>
+            <script>
+                let all = document.querySelector("#all");
+                let chacks = document.querySelector('tbody').querySelectorAll('input');
+                all.addEventListener('click',function(){
+                    for(let i = 0;i<chacks.length;i++){
+                        chacks[i].checked = this.checked;
+                    }
+                })
+                for(let i = 0 ; i<chacks.length;i++) {
+
+
+                    chacks[i].addEventListener('click',function(){
+                        let all_checked = true;
+                        for(let j = 0 ;j<chacks.length;j++)
+                        {
+                            if(!chacks[j].checked)
+                            {
+                                all_checked = false;
+                                break;
+                            }
+                        }
+                        all.checked= all_checked;
+                    })
+                }
+                
+            </script>
+        </body>
+    </html>
