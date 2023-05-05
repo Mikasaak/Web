@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>鼠标跟随小球</title>
+    <style>
+        body {
+            position: relative;
+            /*height: 4000px;*/
+            height: 400vh;
+            /*cursor: none;*/
+        }
+        .t {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+<div class="t"></div>
+<script>
+    document.addEventListener('mousemove', function(e) {
+        var x = e.pageX ;
+        var y = e.pageY;
+        document.querySelector('.t').style.transform = 'translate(' + x  + 'px, ' + y + 'px)';
+    });
+</script>
+</body>
+</html>

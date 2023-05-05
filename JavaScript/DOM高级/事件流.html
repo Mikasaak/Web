@@ -27,24 +27,39 @@
 <body>
 <div class="father">
     <div class="son"></div>
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Element">MDN</a>
     <script>
         let father = document.querySelector('.father');
         let son = document.querySelector('.son');
+        let MDN = document.querySelector('a');
+        MDN.addEventListener('click',function (e){
+            let flag = confirm('是否跳转');
+            if (!flag) {
+                e.preventDefault();//阻止默认事件
+            }
+            e.stopPropagation()//阻止冒泡
+        })
          // 捕获事件
-        // father.addEventListener('click',function (){
+        // father.addEventListener('click',function (e){
         //     alert('father');
+        //     console.log(e.type)
+        //
+        //     // console.log(e.target)
         // },true)
         // son.addEventListener('click',function (){
         //     alert('son');
         // },true)
         // 冒泡事件
-        father.addEventListener('click',function (){
+        father.addEventListener('click',function (e){
             alert('father');
         })
-        son.addEventListener('click',function (){
-            alert('son');
+        son.addEventListener('click',function (e){
+            confirm('请确认');
+            console.log(e);
+            e.stopPropagation()
         })
     </script>
+
 </div>
 </body>
 </html>

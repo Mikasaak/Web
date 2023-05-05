@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            position: relative;
+            height: 4000px;
+            cursor: none;
+        }
+        .t {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: pink;
+            border-radius: 50%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="t"></div>
+<script>
+    document.addEventListener('click',function (e) {
+        // client:浏览器可视区坐标
+        console.log(e.clientX,e.clientY);
+        // document.querySelector('body').innerHTML = 'clientX:' + e.clientX + '<br>clientY:' + e.clientY
+        // +'<br>'+'pageX:' + e.pageX + '<br>' + 'pageY:' + e.pageY + '<br>'
+        //pageX（Y）
+        // page:页面坐标
+        console.log(e.pageX,e.pageY);
+    })
+    document.addEventListener('mousemove',function (e) {
+        let x = e.clientX + document.documentElement.scrollLeft;
+        let y = e.clientY + document.documentElement.scrollTop;
+        document.querySelector('.t').style.left = x-12 + 'px';
+        document.querySelector('.t').style.top = y-12 + 'px';
+    })
+    document.addEventListener('wheel',function (e) {
+        let x = e.clientX + document.documentElement.scrollLeft;
+        let y = e.clientY + document.documentElement.scrollTop;
+        document.querySelector('.t').style.left = x-12 + 'px';
+        document.querySelector('.t').style.top = y-12 + 'px';
+    })
+
+</script>
+</body>
+</html>
