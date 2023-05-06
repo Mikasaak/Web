@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window对象常见操作</title>
+    <script>
+        //dom对象加载完成后进行该操作
+
+        //页面加载完成后进行该操作
+        window.addEventListener('load',function (evt) {
+            document.querySelector('button').addEventListener('click',function (e) {
+                alert(22);
+            })
+        })
+        window.addEventListener('DOMContentLoaded',function (evt) {
+            document.querySelector('button').addEventListener('click',function (e) {
+                alert(11);
+            })
+
+        })
+        window.addEventListener('resize',function () {
+            console.log('窗口大小发生改变');
+            console.log(window.innerWidth);
+        })
+    </script>
+</head>
+<body>
+<button>点击</button>
+
+</body>
+</html>

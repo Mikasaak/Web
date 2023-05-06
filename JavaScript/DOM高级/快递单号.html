@@ -36,6 +36,17 @@
                 }
                 document.querySelector('.big').innerText = this.value;
             })
+        document.querySelector('input')
+            .addEventListener('blur', function (e) {  //失去焦点
+
+                document.querySelector('.big').style.display = 'none';
+            })
+        document.querySelector('input')
+            .addEventListener('focus', function (e) {
+                if(this.value.length !== 0) {//如果输入框有内容，就显示
+                    document.querySelector('.big').style.display = 'block';
+                }
+            })
     </script>
 </div>
 </body>

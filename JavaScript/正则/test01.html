@@ -10,8 +10,27 @@
 <script>
     let reg = /a*/g;
     let str = 'baaaaa';
-    console.log(reg.test(str));
-    console.log(reg.exec(str));
+    let str2 = '?username=andy';
+    let reg2 =/^\?username=(.*)/
+    console.log(reg2.test(str2));
+    console.log(reg2.exec(str2));
+    console.log(str2.replace(reg2,'$1'));
+    let match = str2.match(reg2);
+    if (match) {
+        let value = match[1];
+        console.log('value:'+value); // 输出：andy
+    }
+
+    let str3 = '?username=andy';
+    let match1 = str3.match(/username=(\w+)/);
+    if (match1) {
+        let value = match1[1];
+        console.log(value); // 输出：andy
+    }
+
+
+    // console.log(reg.test(str));
+    // console.log(reg.exec(str));
 
 </script>
 </body>

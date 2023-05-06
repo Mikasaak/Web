@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .timer div{
+            float: left;
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            font-size: 50px;
+            line-height: 100px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+
+        }
+    </style>
+</head>
+<body>
+<div class="timer">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+
+</body>
+<script>
+    let dieTime = new Date('2023-5-6 12:00:00');
+
+    function showTime(){
+        let now = new Date();
+        let times = dieTime - now / 1000;
+        console.log(times)
+        let hours = times / 60 / 60 % 24;
+        let minutes =times  / 60 % 60;
+        let seconds = times  % 60;
+        let divs = document.querySelectorAll('.timer div');
+        divs[0].innerText = ''+parseInt(''+hours);
+        divs[1].innerText = ''+parseInt(''+minutes);
+        divs[2].innerText = ''+parseInt(''+seconds);
+    }
+    showTime()
+    let timer = setInterval(showTime,1000);
+</script>
+</html>

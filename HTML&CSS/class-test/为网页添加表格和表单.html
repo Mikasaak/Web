@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为网页添加表格和表单</title>
+    <style>
+        body {
+            font-family: "宋体";
+            font-size: 12px;
+            color: #515151;
+        }
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /*大盒子设置*/
+        .content {
+            width: 660px;
+            height: 600px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 50px auto;
+            border-radius: 20px;
+        }
+        /*上侧标题*/
+        .content h2 {
+            font-size: 22px;
+            color: #0b0b0b;
+            padding-bottom: 30px;
+        }
+        /*括号内容*/
+        .content h2 em {
+            font-size: 12px;
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*单元格下内边距*/
+        td {
+            padding-bottom: 26px;
+        }
+        /*第一列文字提示*/
+        .content tr:nth-of-type(n) td:nth-of-type(1) {
+            width: 78px;
+            text-align: right;
+            padding-right: 8px;
+        }
+        .content tr:nth-of-type(n) td:nth-of-type(1) i {
+            color: red;
+        }
+        input {
+            outline: none;
+        }
+        input[type='text'] {
+            width: 264px;
+            height: 12px;
+        }
+        input[type='email'] {
+            width: 122px;
+            height: 12px;
+            border: 1px solid #ccc;
+            background: url("./img/email.png") no-repeat 2px center;
+        }
+        input[name = 'name'] {
+            background: url("./img/name.png") no-repeat 2px center;
+        }
+        input[name='phone'] {
+            background: url("./img/phone.png") no-repeat 2px center;
+        }
+        input[type='email'],input[type='text'] {
+            padding: 3px;
+            padding-left: 26px;
+            border: 1px solid #ccc;
+            font-size: 12px;
+            color: #949494;
+            border-radius: 5px;
+        }
+        textarea {
+            overflow-y: scroll;
+            resize: none;
+            width: 432px;
+            height: 164px;
+            color: #949494;
+            padding: 3px;
+        }
+        .content tr:last-of-type input{
+            width: 80px;
+            height: 28px;
+            border: 1px solid rgb(53, 152, 187);
+            background-image: linear-gradient(180deg,#0db2f0,#0388bf,#0db2f0);
+            color: #ffffff;
+            /*background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);*/
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>下面就开始报名吧<em>(以下信息是报名的重要依据，请认真填写)</em></h2>
+        <form>
+            <table>
+                <tr>
+                    <td>姓名<i>*</i></td>
+                    <td><input type="text" name="name" value="报名的重要依据，请认真填写" autocomplete="none"></td>
+                </tr>
+                <tr>
+                    <td>手机<i>*</i></td>
+                    <td><input type="text" name="phone" value="报名的重要依据，请认真填写"></td>
+                </tr>
+                <tr>
+                    <td>性别<i>*</i></td>
+                    <td>
+                        <label>
+                            <input type="radio" name="gender" value="male" checked="checked">
+                            男
+                        </label>
+                        <label>
+                            <input type="radio" name="gender" value="male">
+                            女
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>邮箱<i>*</i></td>
+                    <td><input type="email"></td>
+                </tr>
+                <tr>
+                    <td>意向课程<i>*</i></td>
+                    <td>
+                        <select name="class" id="class">
+                        <option value="base">
+                            网页平面UI设计基础班
+                        </option>
+                        <option value="employ" selected="selected">
+                            网页平面UI设计就业班
+                        </option>
+                        <option value="week">
+                            网页平面UI设计周末班
+                        </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>了解渠道</td>
+                    <td>
+                        <label>
+                            <input type="checkbox" name="way" id="baidu" value="baidu">
+                            baidu
+                        </label>
+                        <label>
+                            <input type="checkbox" name="way" id="oldstd" value="oldstd">
+                            老学员
+                        </label>
+                        <label>
+                            <input type="checkbox" name="way" id="friend" value="friend">
+                            朋友推荐
+                        </label>
+                        <label>
+                            <input type="checkbox" name="way" id="CSDN" value="CSDN">
+                            CSDN网站
+                        </label>
+                        <label>
+                            <input type="checkbox" name="way" id="video" value="video">
+                            视频教程
+                        </label>
+                        <label>
+                            <input type="checkbox" name="way" id="other" value="other">
+                            其他
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>留言</td>
+                    <td>
+                        <textarea name="letter">请简述您有没有设计基础，以及为什么选择学习网页平面UI设计？</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td> <input type="submit" value="提交"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+<script>
+let text = document.querySelectorAll('input[type = \'text\']');
+let letter =document.querySelector('textarea');
+for(let i = 0 ;i<2;i++) {
+    text[i].addEventListener('focus',function () {
+        if (this.value === `报名的重要依据，请认真填写`) {
+            this.value = '';
+        }
+    })
+    text[i].addEventListener('blur',function (){
+        if(this.value ===''){
+            this.value = `报名的重要依据，请认真填写`;
+        }
+    })
+}
+
+letter.addEventListener('focus',function () {
+    if (this.value === `请简述您有没有设计基础，以及为什么选择学习网页平面UI设计？`) {
+        this.value = '';
+    }
+})
+letter.addEventListener('blur',function (){
+    if(this.value ===''){
+        this.value = `请简述您有没有设计基础，以及为什么选择学习网页平面UI设计？`;
+    }
+})
+</script>
+</html>
