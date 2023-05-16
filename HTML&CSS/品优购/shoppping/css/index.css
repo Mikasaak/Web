@@ -8,19 +8,22 @@
 }
 /* focus子模块 */
 .main .focus {
+    position: relative;
     float: left;
     width: 721px;
     height: 100%;
-    background-color: green;
+    /*background-color: green;*/
+
 }
 .main .focus li {
     position: relative;
 }
 
-.main .focus li .pre,
-.main .focus li .next {
+.main .focus .pre,
+.main .focus .next {
     float: left;
     position: absolute;
+    z-index:1;
     top: calc(50% - 40px);
     width: 40px;
     height: 80px;
@@ -31,27 +34,32 @@
     transition: all 300ms;
     cursor: pointer;
 }
-.main .focus li:hover .next ,
-.main .focus li:hover .pre {
+.main .focus:hover>.next ,
+.main .focus:hover>.pre {
     opacity: 1;
 }
-.main .focus li .pre  {
+.main .focus  .pre  {
     left: 0;
     text-align: left;
     border-radius: 0px 35px 35px 0px;
 }
-.main .focus li .next {
+.main .focus  .next {
     right: 0;
     text-align: right;
     border-radius: 35px 0px 0px 35px;
 }
-.main .focus li .point {
+.main .focus  .point {
     position: absolute;
+    /*width: 140px;*/
+    /*height: 40px;*/
+    z-index: 1;
     bottom: 20px;
     left: calc(50% - 42px);
     text-indent: 5em;
 }
-.main .focus li span {
+.main .focus .point span {
+    /*position: absolute;*/
+    z-index: 1;
     float: left;
     cursor: pointer;
     display: block;
@@ -61,6 +69,38 @@
     border: 7px solid rgba(33, 18, 17, 0.5);
     border-radius: 50%;
 }
+.main .focus .point span:hover {
+    background-color: #fff;
+}
+.focus .point .current {
+    border-color: #ffffff!important;
+}
+.focus ul {
+    /*display:flex;*/
+    position: relative;
+    width: 600%;
+    /*flex-direction: column;*/
+}
+.focus ul li {
+    position: relative;
+    float: left;
+}
+.focus .windows {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.windows ul li div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    background-color: rgba(255,192,203,.5);
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%,-50%);
+}
+
 /* newflash子模块 */
 .main .newflash {
     float: right;

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0,
+            maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        </style>
+        <script>
+            window.addEventListener('load',function(){
+                let box = document.querySelector('.box');
+                box.addEventListener('touchstart',function(event){
+                    let touch = event.targetTouches[0];
+                    let X = touch.pageX;
+                    let Y = touch.pageY;
+                    let oL = this.offsetLeft;
+                    let oT = this.offsetTop;
+                    box.addEventListener('touchmove',function(event){
+                        let touch = event.targetTouches[0];
+                        let moveX = touch.pageX-X;
+                        let moveY = touch.pageY-Y;
+                        box.style.left = oL + moveX+'px';
+                        box.style.top = oT + moveY +'px';
+
+                    })
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

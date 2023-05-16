@@ -1,12 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
- $END$   
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        .w {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            height: 200px;
+            background-color: pink;
+        }
+        .banner {
+            /*width: 300px;*/
+            height: 300px;
+            background-color: #ccc;
+        }
+        .main {
+            height: 800px;
+            background-color: skyblue;
+        }
+        .footer {
+            height: 200px;
+            background-color: green;
+        }
+        .aside {
+            position:absolute;
+            top: 400px;
+            right: 0;
+            width: 100px;
+            height: 150px;
+            background-color: blue;
+        }
+        .w div{
+            margin-top: 20px;
+
+        }
+        .go_header {
+            /*display: none;*/
+            position:absolute;
+            z-index: 2;
+            right:0;
+            top: 550px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+
+    </style>
+    </head>
+    <body>
+        <div class="w">
+            <div class="header">header</div>
+            <div class="banner">banner</div>
+            <div class="main">main</div>
+            <div class="footer">footer</div>
+
+        </div>
+        <div class="aside"></div>
+        <div class="go_header"></div>
+
+        <script>
+    let banner =  document.querySelector('.banner');
+    let aside = document.querySelector('.aside');
+    let go_header = document.querySelector('.go_header');
+    let bannerTop = banner.offsetTop;
+    let asideTop = aside.offsetTop;
+    let mainTop = document.querySelector('.main').offsetTop;
+    document.addEventListener('scroll',function() {
+        if (window.scrollY > bannerTop) {
+            aside.style.position = 'fixed';
+            aside.style.top = asideTop - bannerTop + 'px';
+        } else {
+            aside.style.position = 'absolute';
+            aside.style.top = asideTop + 'px'
+        }
+        if (window.scrollY > mainTop) {
+            go_header.style.position = 'fixed';
+            go_header.style.display = 'block';
+
+            go_header.style.top = asideTop - bannerTop + +aside.offsetHeight + 'px';
+        } else {
+            go_header.style.display = 'none';
+        }
+    })
+        function preventScroll(event) {
+            event.preventDefault(); // 阻止默认滚动行为
+            event.stopPropagation(); // 阻止事件冒泡
+        }
+
+        function animate(obj, target, callback) {
+            document.addEventListener('wheel', preventScroll, { passive: false });
+
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                var step = (target - window.scrollY) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+
+                if (window.scrollY === target) {
+                    clearInterval(obj.timer);
+                    callback && callback();
+                    document.removeEventListener('wheel', preventScroll,false); // 在回调函数中移除滚轮事件监听器
+                }
+
+                obj.scrollTo(0, obj.scrollY + step);
+            }, 15);
+        }
+
+        go_header.addEventListener('click', function() {
+            animate(window, 0, function() {
+                console.log(11111);
+            });
+        });
+        // document.addEventListener('wheel', preventScroll, { passive: false });
+        // document.removeEventListener('wheel', preventScroll,false);
+
+        // document.addEventListener('wheel',preventScroll,{passive:false})
+        // aside.addEventListener('click',function (){
+        //     document.removeEventListener('wheel',preventScroll,{passive:false})
+        //     console.log('yichule')
+        // })
+
+
+
+
+
+// 添加滚轮事件监听器，并阻止滚动
+
+
+    // })
+</script>
+    </body>
 </html>

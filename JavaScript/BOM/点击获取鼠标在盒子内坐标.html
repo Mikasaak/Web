@@ -5,8 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
 </head>
 <body>
- $END$   
+<div class="box">
+
+</div>
+<script>
+    let box = document.querySelector('.box');
+    box.addEventListener('click',function (e) {
+        let x = e.pageX - box.offsetLeft;
+        let y = e.pageY - box.offsetTop;
+        box.innerHTML = 'x:'+x+'y:'+y;
+    })
+</script>
 </body>
 </html>

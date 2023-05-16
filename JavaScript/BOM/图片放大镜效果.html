@@ -5,8 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        :root {
+            --oW:400px;
+            --oW1:400;
+            --mW:300px;
+            --mW1:300;
+            --bW:600px;
+            --bW1:600;
+            --W:800px;
+
+        }
+
+
+
+        .original {
+            position: relative;
+            width: var(--oW);
+            height:  var(--oW);
+        }
+        .original:after {
+            content:attr(c);
+        }
+        .original img {
+            --w:100% ;
+            width: var(--w);
+            height: 100%;
+        }
+        .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: var(--mW);
+            height: var(--mW);
+            background-color: yellow;
+            opacity: 0.5;
+        }
+        .big {
+            position: absolute;
+            left: 500px;
+            top: 8px;
+            width:var(--bW);
+            height: var(--bW);
+            background: url("../img/ganyu.jpg") no-repeat;
+            background-size: calc(var(--bW1) / var(--mW1) * var(--oW));
+            border: 3px solid pink;
+
+        }
+
+    </style>
 </head>
 <body>
- $END$   
+<div class="original">
+    <img src="../img/ganyu.jpg" alt="">
+    <div class="mask"></div>
+</div>
+<div class="big">
+    <div class="pic"></div>
+</div>
+<script>
+    let mask = document.querySelector('.mask');
+    let original = document.querySelector('.original');
+    let big = document.querySelector('.big');
+    original.onmouseover = function (e) {
+        mask.style.display = 'block';
+    }
+    original.onmouseout = function (e) {
+        mask.style.display = 'none';
+    }
+    original.addEventListener('mousemove',function (e){
+        console.log(original.offsetLeft);
+        console.log(original.offsetTop);
+        let inBoxLeft = e.clientX - original.offsetLeft - mask.offsetWidth/2;
+        let inBoxTop = e.clientY - original.offsetTop - mask.offsetHeight/2;
+        console.log(inBoxLeft, inBoxTop);
+        let maxLeft = original.offsetWidth - mask.offsetWidth;
+        let maxTop = original.offsetHeight - mask.offsetHeight;
+        console.log(original.offsetWidth, original.offsetHeight);
+        console.log(maxLeft, maxTop);
+        if (inBoxLeft < 0) {
+            inBoxLeft = 0;
+        }
+        if (inBoxTop < 0){
+            inBoxTop = 0;
+        }
+        if(inBoxTop > maxTop) {
+            inBoxTop = maxTop;
+        }
+        if (inBoxLeft > maxLeft){
+            inBoxLeft = maxLeft;
+        }
+        mask.style.left = inBoxLeft + 'px';
+        mask.style.top = inBoxTop + 'px'
+        let bigPicW = 600*4/3;
+        console.log("bigPicW:"+bigPicW);
+        let proportion =  (bigPicW - big.offsetWidth) /(original.offsetWidth - mask.offsetWidth);
+        console.log(proportion)
+        let bigMoveLeft = mask.offsetLeft * proportion;
+        let bigMoveTop = mask.offsetTop * proportion;
+
+        big.style.backgroundPositionX = -bigMoveLeft + 'px';
+        big.style.backgroundPositionY = -bigMoveTop + 'px'
+
+    })
+
+
+</script>
 </body>
 </html>

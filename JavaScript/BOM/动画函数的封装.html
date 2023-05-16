@@ -1,12 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
- $END$   
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: relative;
+            transition: all 0.5s linear;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="box">
+        </div>
+        <button>开始</button>
+        <script>
+    window.addEventListener("load", function(e) {
+        function animate(obj , distance , duration) {
+            let t = 10;
+            let time = duration*1000/t;
+            let perDis = distance/time;
+            let originLeft = obj.getBoundingClientRect().left;
+            // console.log(originLeft);
+            // console.log(time)
+            // console.log(perDis);
+            // console.log(obj.getBoundingClientRect().left)
+            // console.log(originLeft + distance)
+            if (!obj.timer){//如果定时器不存在才创建定时器
+                obj.timer = setInterval(function() {
+                    obj.style.left = obj.getBoundingClientRect().left + perDis + "px";
+                    if(obj.getBoundingClientRect().left >= originLeft + distance) {
+                        clearInterval(obj.timer);
+                    }
+                },t);
+            }
+        }
+        function animate1(element, distance, duration) {
+            let start = null;
+
+            function step(timestamp) {
+                if (!start) {
+                    start = timestamp;
+                }
+
+                let progress = timestamp - start;
+                let percent = Math.min(progress / duration, 1);
+
+                element.style.transform = "translateX(" + percent * distance + "px)";
+
+                if (progress < duration) {
+                    requestAnimationFrame(step);
+                }
+            }
+
+            requestAnimationFrame(step);
+        }
+        function animate2(element, distance, duration) {
+            let startTime = null;
+            let startPosition = element.offsetLeft;
+
+            function animation(currentTime) {
+                if (startTime === null) {
+                    startTime = currentTime;
+                }
+                let elapsedTime = currentTime - startTime;
+                let position = ease(elapsedTime, startPosition, distance, duration);
+                element.style.left = position + "px";
+                if (elapsedTime < duration) {
+                    requestAnimationFrame(animation);
+                }
+            }
+
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+
+            requestAnimationFrame(animation);
+        }
+
+
+        let box = document.querySelector('.box');
+        let btn = document.querySelector('button');
+        // box.classList.add('btn')
+        btn.addEventListener('click',function(){
+            animate2(box,555,3);
+        })
+
+
+    })
+
+</script>
+    </body>
 </html>

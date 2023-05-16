@@ -62,3 +62,15 @@
 .sk-bd >ul>li:hover {
     border: 1px solid #c81523;
 }
+
+.sk-bd ul {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.sk-bd ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}

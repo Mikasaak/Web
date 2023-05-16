@@ -16,6 +16,11 @@
         <link rel="stylesheet" href="css/common.css">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="./swiper-8.4.7/swiper-bundle.min.css">
+        <link rel="stylesheet" href="./css/swiper.css">
+        <script src="./js/animate.js"></script>
+        <script src="./js/index.js"></script>
+
     </head>
     <body>
         <!-- 快捷导航 -start-->
@@ -37,10 +42,18 @@
                         <li class="arrow-icon">
                             我的品优购
                             <ul class="dd-menu">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
+                                <li>
+                                    <a href="#">收藏</a>
+                                </li>
+                                <li>
+                                    <a href="#">订单</a>
+                                </li>
+                                <li>
+                                    <a href="#">关注</a>
+                                </li>
+                                <li>
+                                    <a href="#">浏览记录</a>
+                                </li>
                             </ul>
                         </li>
                         <li></li>
@@ -51,10 +64,18 @@
                         <li class="arrow-icon">
                             关注品优购
                             <ul class="dd-menu">
-                                <li>1</li>
-                                <li>2</li>
-                                <li>3</li>
-                                <li>4</li>
+                                <li>
+                                    <a href="#">收藏</a>
+                                </li>
+                                <li>
+                                    <a href="#">订单</a>
+                                </li>
+                                <li>
+                                    <a href="#">关注</a>
+                                </li>
+                                <li>
+                                    <a href="#">浏览记录</a>
+                                </li>
                             </ul>
                         </li>
                         <li></li>
@@ -165,19 +186,36 @@
         <div class="w clearfix">
             <div class="main">
                 <div class="focus">
-                    <ul>
-                        <li>
-                            <img src="upload/focus1.png" alt="">
-                            <div class="pre">&lt;</div>
-                            <div class="next">&gt;</div>
-                            <div class="point">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                    <div class="windows">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+                                        <img src="upload/focus0.png" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+                                        <img src="upload/focus1.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+                                        <img src="upload/focus2.jpg" alt="">
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="javascript:;">
+                                        <img src="upload/focus3.jpg" alt="">
+                                    </a>
+                                </div>
                             </div>
-                        </li>
-                    </ul>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="newflash">
                     <div class="news">
@@ -247,10 +285,10 @@
             </div>
             <div class="recommend-bd">
                 <ul>
-                    <li><a href=""><img src="upload/recom_03.jpg" alt=""></a></li>
-                    <li><a href=""><img src="upload/recom_03.jpg" alt=""></a></li>
-                    <li><a href=""><img src="upload/recom_03.jpg" alt=""></a></li>
-                    <li><a href=""><img src="upload/recom_03.jpg" alt=""></a></li>
+                    <li><a href=""><img src="upload/Suggest1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="upload/Suggest2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="upload/Suggest3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="upload/Suggest4.jpg" alt=""></a></li>
                 </ul>
             </div>
         </div>
@@ -266,42 +304,42 @@
             <div class="like-bd">
                 <ul>
                     <li><a href="#">
-                            <img src="upload/redbag_03.jpg" alt="">
+                            <img src="upload/like_1.jpg" alt="">
                             <p>阳光美包新款单肩包女<br>
                                 包时尚子母包四件套女</p>
                             <i>¥116.00</i>
                         </a>
                     </li>
                     <li><a href="#">
-                            <img src="upload/redbag_03.jpg" alt="">
+                            <img src="upload/like_2.jpg" alt="">
                             <p>阳光美包新款单肩包女<br>
                                 包时尚子母包四件套女</p>
                             <i>¥116.00</i>
                         </a>
                     </li>
                     <li><a href="#">
-                            <img src="upload/redbag_03.jpg" alt="">
+                            <img src="upload/like_3.jpg" alt="">
                             <p>阳光美包新款单肩包女<br>
                                 包时尚子母包四件套女</p>
                             <i>¥116.00</i>
                         </a>
                     </li>
                     <li><a href="#">
-                            <img src="upload/redbag_03.jpg" alt="">
+                            <img src="upload/like_4.jpg" alt="">
                             <p>阳光美包新款单肩包女<br>
                                 包时尚子母包四件套女</p>
                             <i>¥116.00</i>
                         </a>
                     </li>
                     <li><a href="#">
-                            <img src="upload/redbag_03.jpg" alt="">
+                            <img src="upload/like_5.jpg" alt="">
                             <p>阳光美包新款单肩包女<br>
                                 包时尚子母包四件套女</p>
                             <i>¥116.00</i>
                         </a>
                     </li>
                     <li><a href="#">
-                            <img src="upload/redbag_03.jpg" alt="">
+                            <img src="upload/like_6.jpg" alt="">
                             <p>阳光美包新款单肩包女<br>
                                 包时尚子母包四件套女</p>
                             <i>¥116.00</i>
@@ -369,15 +407,15 @@
                     <h3>家用电器</h3>
                     <div class="tb-list">
                         <ul>
-                            <li><a href="" class="style_red">热门</a>|</li>
-                            <li><a href="">大家电 </a>|</li>
-                            <li><a href="">生活电器</a>|</li>
-                            <li><a href="">厨房电器</a>|</li>
-                            <li><a href="">个护健康</a>|</li>
-                            <li><a href="">应季电器</a>|</li>
-                            <li><a href="">空气/净水</a>|</li>
-                            <li><a href="">新奇特</a>|</li>
-                            <li><a href="">高端电器</a></li>
+                            <li><a href="#" class="style_red">热门</a>|</li>
+                            <li><a href="#">大家电 </a>|</li>
+                            <li><a href="#">生活电器</a>|</li>
+                            <li><a href="#">厨房电器</a>|</li>
+                            <li><a href="#">个护健康</a>|</li>
+                            <li><a href="#">应季电器</a>|</li>
+                            <li><a href="#">空气/净水</a>|</li>
+                            <li><a href="#">新奇特</a>|</li>
+                            <li><a href="#">高端电器</a></li>
 
                         </ul>
                     </div>
@@ -427,16 +465,12 @@
                     <h3>手机通讯</h3>
                     <div class="tb-list">
                         <ul>
-                            <li><a href="" class="style_red">热门</a>|</li>
-                            <li><a href="">大家电 </a>|</li>
-                            <li><a href="">生活电器</a>|</li>
-                            <li><a href="">厨房电器</a>|</li>
-                            <li><a href="">个护健康</a>|</li>
-                            <li><a href="">应季电器</a>|</li>
-                            <li><a href="">空气/净水</a>|</li>
-                            <li><a href="">新奇特</a>|</li>
-                            <li><a href="">高端电器</a></li>
-
+                            <li><a href="#">手机通讯</a></li>
+                            <li><a href="#">依旧换新</a></li>
+                            <li><a href="#">双卡双待</a></li>
+                            <li><a href="#">自营配件</a></li>
+                            <li><a href="#">金属机身</a></li>
+                            <li><a href="#">高清屏</a></li>
                         </ul>
                     </div>
                 </div>
@@ -452,28 +486,28 @@
                                     <li><a href="#">滚筒洗衣机</a></li>
                                     <li><a href="#">电热水器</a></li>
                                 </ul>
-                                <a href="#">
-                                    <img src="upload/floor-1-1.png" alt="">
+                                <a href="list.html">
+                                    <img src="upload/floor-2-1.png" alt="">
                                 </a>
                             </li>
-                            <li><a href="#">
-                                    <img src="upload/floor-1-b01.png" alt="">
+                            <li><a href="list.html">
+                                    <img src="upload/floor-2-b01.png" alt="">
                                 </a>
                             </li>
-                            <li><a href="#">
-                                    <img src="upload/floor-1-2.png" alt="">
-                                    <img src="upload/floor-1-3.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="upload/floor-1-4.png" alt="">
+                            <li><a href="list.html">
+                                    <img src="upload/floor-2-2.png" alt="">
+                                    <img src="upload/floor-2-3.png" alt="">
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <img src="upload/floor-1-5.png" alt="">
-                                    <img src="upload/floor-1-6.png" alt="">
+                                <a href="list.html">
+                                    <img src="upload/floor-2-4.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="list.html">
+                                    <img src="upload/floor-2-5.png" alt="">
+                                    <img src="upload/floor-2-6.png" alt="">
                                 </a>
                             </li>
                         </ul>
@@ -586,41 +620,43 @@
                         <dd><a href="#">大家电</a></dd>
                         <dd><a href="#">联系客服</a></dd>
                     </dl>
+
+
+
+
+
+
                     <dl>
-                        <dt>服务指南</dt>
-                        <dd><a href="#">购物流程</a></dd>
-                        <dd><a href="#">会员介绍</a></dd>
-                        <dd><a href="#">生活旅行/团购</a></dd>
-                        <dd><a href="#">常见问题</a></dd>
-                        <dd><a href="#">大家电</a></dd>
-                        <dd><a href="#">联系客服</a></dd>
+                        <dt>配送方式</dt>
+                        <dd><a href="#">上门自提</a></dd>
+                        <dd><a href="#">211限时达</a></dd>
+                        <dd><a href="#">配送服务查询</a></dd>
+                        <dd><a href="#">配送费收取标准</a></dd>
+                        <dd><a href="#">海外配送</a></dd>
                     </dl>
                     <dl>
-                        <dt>服务指南</dt>
-                        <dd><a href="#">购物流程</a></dd>
-                        <dd><a href="#">会员介绍</a></dd>
-                        <dd><a href="#">生活旅行/团购</a></dd>
-                        <dd><a href="#">常见问题</a></dd>
-                        <dd><a href="#">大家电</a></dd>
-                        <dd><a href="#">联系客服</a></dd>
+                        <dt>支付方式</dt>
+                        <dd><a href="#">货到付款</a></dd>
+                        <dd><a href="#">在线支付</a></dd>
+                        <dd><a href="#">分期付款</a></dd>
+                        <dd><a href="#">邮局汇款</a></dd>
+                        <dd><a href="#">公司转账</a></dd>
                     </dl>
                     <dl>
-                        <dt>服务指南</dt>
-                        <dd><a href="#">购物流程</a></dd>
-                        <dd><a href="#">会员介绍</a></dd>
-                        <dd><a href="#">生活旅行/团购</a></dd>
-                        <dd><a href="#">常见问题</a></dd>
-                        <dd><a href="#">大家电</a></dd>
-                        <dd><a href="#">联系客服</a></dd>
+                        <dt>售后服务</dt>
+                        <dd><a href="#">售后政策</a> </dd>
+                        <dd><a href="#">价格保护</a> </dd>
+                        <dd><a href="#">退款说明</a> </dd>
+                        <dd><a href="#"> 返修/退换货</a></dd>
+                        <dd><a href="#">取消订单</a></dd>
                     </dl>
                     <dl>
-                        <dt>服务指南</dt>
-                        <dd><a href="#">购物流程</a></dd>
-                        <dd><a href="#">会员介绍</a></dd>
-                        <dd><a href="#">生活旅行/团购</a></dd>
-                        <dd><a href="#">常见问题</a></dd>
-                        <dd><a href="#">大家电</a></dd>
-                        <dd><a href="#">联系客服</a></dd>
+                        <dt>特色服务</dt>
+                        <dd><a href="#">夺宝岛</a> </dd>
+                        <dd><a href="#">DIY装机</a> </dd>
+                        <dd><a href="#">延保服务</a> </dd>
+                        <dd><a href="#"> 品优购E卡</a></dd>
+                        <dd><a href="#">品优购通信</a></dd>
                     </dl>
                     <dl>
                         <dt> 帮助中心</dt>
@@ -650,5 +686,7 @@
             </div>
         </footer>
         <!-- footer模块-end -->
+        <script src="./swiper-8.4.7/swiper-bundle.min.js"></script>
+        <script src="./js/swiper.js"></script>
     </body>
 </html>

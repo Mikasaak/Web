@@ -5,8 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        .aside {
+            position: relative;
+            z-index: 99;
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+        .content {
+            position: absolute;
+            top: 0;
+            left: 50px;
+            z-index: -1;
+            width: 100px;
+            height: 50px;
+            background-color: skyblue;
+            transform: translateX(-100%);
+            transition: all 0.5s;
+
+        }
+        .aside:hover + .content {
+            transform: translateX(0);
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
- $END$   
+<div class="aside">
+</div>
+<div class="content"></div>
+<script>
+
+</script>
 </body>
 </html>

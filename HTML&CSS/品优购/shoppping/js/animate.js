@@ -24,3 +24,57 @@ function animate(obj, target, callback) {
 
     }, 15);
 }
+function Myanimate(element, distance, duration,pages) {
+    element.animate = false;//设置一个属性来看是否有动画
+    if (element.animate === false) {//若没有进行
+        element.animate = true;//设置标识符为true
+        let start = null;
+        if (!element.style.left) {
+            element.style.left = '0px'
+        }
+        console.log(element.style.left)
+
+        let originLeft = element.style.left;
+        let reg = /(.*)px/
+        let oL = Number(originLeft.match(reg)[1]);
+        console.log(oL)
+        function step(timestamp) {
+            if (!start) {
+                start = timestamp;
+            }
+
+            let progress = timestamp - start;
+            let percent = Math.min(progress / duration, 1);
+            // console.log('o:' + (oL + percent * distance))
+            // console.log('ss:' + pages*distance)
+            if(distance<0){
+                if (oL + percent * distance <= pages*distance){
+                    element.style.left = 0 + "px";
+                    // console.log(true)
+                }
+                else{
+                    element.style.left =  oL + percent * distance + "px";
+                }
+            }
+            else {
+                if (oL >= 0){
+                    element.style.left = -pages*distance + "px";
+                    oL = Number(element.style.left.match(reg)[1])
+                    console.log(-pages*distance + "px")
+                    console.log(`下一张true1231`)
+                }
+                if (oL < 0)  {
+                    element.style.left =  oL + percent * distance + "px";
+                }
+
+            }
+
+            if (progress < duration) {
+                requestAnimationFrame(step);
+            }
+        }
+        requestAnimationFrame(step);
+    }
+    element.animate = false;
+
+}

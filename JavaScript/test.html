@@ -5,8 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .parent {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 200px;
+            width: 400px;
+            background-color: #eee;
+        }
+        .child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            z-index: 999;
+        }
+    </style>
+
+
 </head>
 <body>
- $END$   
+<div class="parent">
+    <div class="child"></div>
+    <p>这是一个段落。</p>
+    <p>这是另一个段落。</p>
+</div>
+
 </body>
 </html>

@@ -5,8 +5,184 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .login a h2 {
+            width: max-content;
+            height: max-content;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .login .loginTab {
+            /*display: flex;*/
+            flex-direction: column;
+            /*display: none;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 1;
+            align-items: center;
+            justify-content: center;
+            width: 500px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .loginTab .loginTab-header {
+            /*position: absolute;*/
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            cursor: move;
+        }
+
+        .loginTab-header h2  {
+            margin: 0;
+        }
+        .loginTab-content {
+            flex-grow: 1;
+            display: block;
+            width: 100%;
+        }
+        .loginTab .close {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+            background-color: skyblue;
+            cursor: pointer;
+        }
+
+        .mask {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0,0,0,0.5);
+        }
+
+    </style>
 </head>
 <body>
- $END$   
+<div class="login">
+    <a href="javascript:;">
+        <h2>点击登录</h2>
+    </a>
+    <div class="loginTab">
+        <div class="close">×</div>
+        <div class="loginTab-header">
+            <h2>登录</h2>
+        </div>
+        <div class="loginTab-content">
+        </div>
+    </div>
+</div>
+<div class="mask"></div>
+<script>
+    let startlogin = document.querySelector('.login a');
+    let close = document.querySelector('.close');
+    let login = document.querySelector('.loginTab');
+    let mask = document.querySelector('.mask');
+    let tital = document.querySelector('.loginTab-header h2');
+    close.addEventListener('click',function () {
+        login.style.display = 'none';
+        mask.style.display = 'none';
+    })
+    startlogin.addEventListener('click',function () {
+        login.style.display = 'block';
+        mask.style.display = 'block';
+        // 恢复默认位置
+        login.style.top='50%';
+        login.style.left='50%';
+        login.style.transform='translate(-50%,-50%)';
+    })
+
+
+    let isDragging = false;
+    let X,Y,boxL,boxT,mX,mY,nL,nT;
+    tital.addEventListener('mousedown',function (e){
+        isDragging = true
+        X = e.clientX;
+        boxL = login.offsetLeft;
+        Y = e.clientY;
+        boxT= login.offsetTop;
+        console.log('X'+X);
+        console.log('Y'+Y)
+        console.log(boxL);
+        console.log(boxT)
+    })
+    login.addEventListener('mousemove',function (e) {
+        login.style.left = boxL;
+        login.style.top = boxT;
+        mX = e.clientX - X;
+        mY = e.clientY - Y;
+        let ww = window.innerWidth;
+        let wh = window.innerHeight;
+        let minLeft = login.offsetWidth / 2;
+        let minTop = login.offsetHeight / 2;
+        let maxLeft = ww - login.offsetWidth + login.offsetWidth / 2;
+        let maxTop = wh - login.offsetHeight + login.offsetHeight / 2;
+        // console.log('ww:'+ww);
+        // console.log('wh:'+wh);
+        // console.log('minLeft:'+minLeft);
+        // console.log('minTop:'+minTop);
+        // console.log('maxLeft:'+maxLeft);
+        // console.log('maxTop:'+maxTop);
+        console.log(isDragging)
+        if (isDragging === true ) {
+            mX = e.clientX - X;
+            mY = e.clientY - Y;
+            nL = boxL + mX;
+            nT = boxT + mY;
+            if (nL < minLeft) {
+                nL = minLeft;
+                console.log('nL'+nL)
+            }
+            if (nL > maxLeft) {
+                nL = maxLeft;
+                console.log('nL'+nL)
+            }
+            if (nT < minTop) {
+                nT = minTop;
+                console.log('nT'+nT)
+            }
+            if (nT > maxTop) {
+                nT = maxTop;
+                console.log('nT'+nT)
+            }
+            login.style.left = nL + 'px';
+            login.style.top = nT + 'px';
+
+
+            // login.style.left = e.clientX - X + 'px';
+            // login.style.top = e.clientY - Y + 'px';
+            // console.log(isDragging)
+            console.log(nL)
+            console.log(nT)
+        }
+        else {
+            console.log(e.clientX);
+            console.log(e.clientY)
+        }
+    })
+    document.addEventListener('mouseup',function () {
+        isDragging = false;
+
+    })
+
+
+</script>
 </body>
 </html>

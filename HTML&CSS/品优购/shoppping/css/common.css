@@ -30,7 +30,7 @@
     height: 31px;
     background-color: #f1f1f1;
 }
-.shortcut ul li {
+.shortcut .fr>ul>li {
     float: left;
     line-height: 31px;
     text-align: center;
@@ -78,9 +78,16 @@
 }
 .shortcut .arrow-icon:hover .dd-menu {
     z-index: 1;
-    height: 50px;
-    visibility: visible;
-    opacity: 1;
+    height: 120px;
+    /*visibility: visible;*/
+    /*opacity: 1;*/
+}
+.dd-menu li a{
+    display: block;
+    font-size: 15px;
+}
+.dd-menu li {
+    display: block!important;
 }
 /* 头部模块 */
 .header {
